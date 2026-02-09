@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <>
       {/* Mobile Banner */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background px-4 py-3">
+      <div className="2xl:hidden fixed top-0 left-0 right-0 z-50 bg-background px-4 py-3">
         <motion.div
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
@@ -34,8 +34,8 @@ const Header = () => {
         </motion.div>
       </div>
 
-      <header className="fixed top-14 left-0 right-0 z-40 bg-background/95 backdrop-blur-md shadow-sm lg:top-0 lg:z-50">
-        <div className="container-custom">
+      <header className="fixed top-14 left-0 right-0 z-40 bg-background/95 backdrop-blur-md shadow-sm 2xl:top-0 2xl:z-50">
+        <div className="container-custom 2xl:max-w-screen-2xl">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
@@ -43,7 +43,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden xl:flex items-center gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -59,17 +59,17 @@ const Header = () => {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden xl:flex items-center gap-4">
               <motion.div
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="px-4 py-2 bg-[#002868] border-2 border-[#bf0a30] rounded-full shadow-md"
+                className="hidden 2xl:block px-4 py-2 bg-[#002868] border-2 border-[#bf0a30] rounded-full shadow-md"
               >
                 <p className="text-xs font-black text-white uppercase tracking-wider flex items-center gap-2">
                   <span className="text-[#ffd700]">★</span> Propiedad de Veterano
                 </p>
               </motion.div>
-              <a href="tel:+16152308868" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+16152308868" className="hidden 2xl:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
                 (615) 230-8868
               </a>
@@ -81,7 +81,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-foreground"
+              className="xl:hidden p-2 text-foreground"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -96,7 +96,7 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-background border-t border-border overflow-hidden"
+              className="xl:hidden bg-background border-t border-border overflow-hidden"
             >
               <nav className="container-custom py-6 flex flex-col gap-4">
                 {navLinks.map((link) => (

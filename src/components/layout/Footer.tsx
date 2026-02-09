@@ -1,0 +1,103 @@
+import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import logo from "@/assets/logo.png";
+
+const serviceAreas = [
+  "Gallatin, TN",
+  "Springfield, TN",
+  "Hendersonville, TN",
+  "Westmoreland, TN",
+  "Whitehouse, TN",
+  "Bowling Green, KY",
+  "Portland, TN",
+  "Franklin, KY",
+];
+
+const Footer = () => {
+  return (
+    <footer className="bg-secondary text-secondary-foreground">
+      <div className="container-custom py-8 md:py-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+          {/* Brand */}
+          <div className="col-span-2 lg:col-span-1 space-y-4">
+            <img src={logo} alt="Ms. Emmett's Soul Food" className="h-16 md:h-24 w-auto" />
+            <p className="text-secondary-foreground/80 text-xs md:text-sm leading-relaxed">
+              Comida soul auténtica y casera servida fresca con tradición, pasión y sabor auténtico.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/emmettskitchen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 bg-secondary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">Enlaces Rápidos</h4>
+            <nav className="space-y-2 md:space-y-3">
+              <Link to="/" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Inicio</Link>
+              <Link to="/menu" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Menú</Link>
+              <Link to="/catering" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Catering</Link>
+              <Link to="/order" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Ordenar en Línea</Link>
+              <Link to="/about" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Nosotros</Link>
+              <Link to="/contact" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Contacto</Link>
+            </nav>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">Áreas de Servicio</h4>
+            <ul className="space-y-1 md:space-y-2">
+              {serviceAreas.map((area) => (
+                <li key={area} className="text-secondary-foreground/80 text-xs md:text-sm flex items-center gap-2">
+                  <MapPin className="w-3 h-3 text-accent flex-shrink-0" />
+                  <span>{area}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">Contáctanos</h4>
+            <div className="space-y-3 md:space-y-4">
+              <a
+                href="tel:+16152308868"
+                className="flex items-center gap-2 md:gap-3 text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors"
+              >
+                <Phone className="w-4 md:w-5 h-4 md:h-5 text-accent flex-shrink-0" />
+                <span>(615) 230-8868</span>
+              </a>
+              <a
+                href="mailto:Info@emmettsoulfood.com"
+                className="flex items-center gap-2 md:gap-3 text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors break-all"
+              >
+                <Mail className="w-4 md:w-5 h-4 md:h-5 text-accent flex-shrink-0" />
+                <span>Info@emmettsoulfood.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-secondary-foreground/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-secondary-foreground/60 text-xs md:text-sm">
+          <p>© {new Date().getFullYear()} Ms. Emmett's Soul Food. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

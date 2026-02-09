@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* Soul Food Kitchen Design System - Warm, Earthy, Inviting */
+
+@layer base {
+  :root {
+    /* Brighter cream background */
+    --background: 45 50% 98%;
+    --foreground: 20 25% 18%;
+
+    /* Lighter cream cards with yellow tint */
+    --card: 45 35% 96%;
+    --card-foreground: 20 25% 18%;
+
+    --popover: 45 35% 96%;
+    --popover-foreground: 20 25% 18%;
+
+    /* Deep Soul Red - primary brand color */
+    --primary: 0 70% 45%;
+    --primary-foreground: 45 50% 98%;
+
+    /* Softer warm taupe instead of brown - secondary */
+    --secondary: 40 15% 95%; /* Lighter taupe/off-white */
+    --secondary-foreground: 20 25% 18%;
+
+    /* Lighter muted tones */
+    --muted: 40 25% 92%;
+    --muted-foreground: 30 15% 50%;
+
+    /* Golden Yellow accent (increased prominence) */
+    --accent: 43 95% 55%;
+    --accent-foreground: 20 25% 18%;
+
+    /* Bright Golden Yellow - highlight */
+    --highlight: 48 98% 52%;
+    --highlight-foreground: 20 25% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 30% 88%;
+    --input: 40 30% 88%;
+    --ring: 0 70% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens - brighter and more yellow */
+    --gingham-red: 0 85% 45%;
+    --warm-wood: 35 25% 92%; /* Brighter wood */
+    --cream-white: 45 40% 97%;
+    --soul-gold: 48 98% 55%;
+  }
+
+  .dark {
+    --background: 20 30% 10%;
+    --foreground: 45 40% 96%;
+
+    --card: 25 25% 16%;
+    --card-foreground: 45 40% 96%;
+
+    --popover: 25 25% 16%;
+    --popover-foreground: 45 40% 96%;
+
+    --primary: 0 75% 50%;
+    --primary-foreground: 45 50% 98%;
+
+    --secondary: 30 15% 20%;
+    --secondary-foreground: 45 50% 98%;
+
+    --muted: 25 20% 22%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 43 95% 55%;
+    --accent-foreground: 20 25% 18%;
+
+    --highlight: 48 98% 52%;
+    --highlight-foreground: 20 25% 18%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 0 65% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  /* Gingham pattern background - BOLDER and HIGHER CONTRAST */
+  .gingham-pattern {
+    background-image: 
+      linear-gradient(90deg, hsl(0 85% 45% / 0.15) 50%, transparent 50%),
+      linear-gradient(hsl(0 85% 45% / 0.15) 50%, transparent 50%);
+    background-size: 30px 30px;
+    background-color: white;
+  }
+
+  /* Soul food warm gradient */
+  .gradient-soul {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(180deg, hsl(35 50% 97%) 0%, hsl(30 40% 92%) 100%);
+  }
+
+  /* Hero overlay */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      hsl(20 30% 15% / 0.7) 0%,
+      hsl(20 30% 10% / 0.85) 100%
+    );
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .card-hover:hover {
+    @apply -translate-y-2 shadow-xl;
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.25);
+  }
+
+  /* Text gradient */
+  .text-gradient-soul {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  /* Warm shadow */
+  .shadow-warm {
+    box-shadow: 0 10px 30px -10px hsl(25 60% 40% / 0.3);
+  }
+
+  .shadow-warm-lg {
+    box-shadow: 0 20px 50px -15px hsl(25 60% 40% / 0.4);
+  }
+
+  /* Animated underline */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-6;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

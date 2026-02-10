@@ -20,10 +20,10 @@ const Header = () => {
   const navLinks = [
     { name: t("home"), path: "/" },
     { name: t("menu"), path: "/menu" },
-    { name: `${t("catering")} (${i18n.language === 'es' ? 'Próximamente' : 'Coming Soon'})`, path: "/catering" },
+    { name: `${t("catering")} (${t("common.comingSoon")})`, path: "/catering" },
     { name: t("about"), path: "/about" },
     { name: t("gallery"), path: "/gallery" },
-    { name: `${t("reviews")} (${i18n.language === 'es' ? 'Próximamente' : 'Coming Soon'})`, path: "/reviews" },
+    { name: `${t("reviews")} (${t("common.comingSoon")})`, path: "/reviews" },
     { name: t("contact"), path: "/contact" },
   ];
 
@@ -32,7 +32,7 @@ const Header = () => {
     { code: "es", name: "Español", flag: "🇲🇽" },
   ];
 
-  const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[1];
+  const currentLanguage = languages.find((lang) => i18n.language.startsWith(lang.code)) || languages[1];
 
   const toggleLanguage = (code: string) => {
     i18n.changeLanguage(code);
@@ -53,7 +53,7 @@ const Header = () => {
           className="px-4 py-2 bg-[#002868] border-2 border-[#bf0a30] rounded-full text-center shadow-md"
         >
           <p className="text-[10px] sm:text-xs font-black text-white uppercase tracking-wider flex items-center justify-center gap-1.5">
-            <span className="text-[#ffd700]">★</span> {i18n.language === 'es' ? 'Propiedad y Operado por Veterano' : 'Veteran Owned & Operated'} <span className="text-[#ffd700]">★</span>
+            <span className="text-[#ffd700]">★</span> {i18n.language.startsWith('es') ? 'Propiedad y Operado por Veterano' : 'Veteran Owned & Operated'} <span className="text-[#ffd700]">★</span>
           </p>
         </motion.div>
       </div>
@@ -107,7 +107,7 @@ const Header = () => {
                         <span>{lang.flag}</span>
                         <span>{lang.name}</span>
                       </div>
-                      {i18n.language === lang.code && <Check className="w-4 h-4 text-primary" />}
+                      {i18n.language.startsWith(lang.code) && <Check className="w-4 h-4 text-primary" />}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -119,7 +119,7 @@ const Header = () => {
                 className="hidden 2xl:flex px-4 py-2 bg-[#002868] border-2 border-[#bf0a30] rounded-full shadow-md"
               >
                 <p className="text-[10px] font-black text-white uppercase tracking-wider flex items-center gap-2">
-                  <span className="text-[#ffd700]">★</span> {i18n.language === 'es' ? 'Propiedad de Veterano' : 'Veteran Owned'}
+                  <span className="text-[#ffd700]">★</span> {i18n.language.startsWith('es') ? 'Propiedad de Veterano' : 'Veteran Owned'}
                 </p>
               </motion.div>
 
@@ -154,7 +154,7 @@ const Header = () => {
                         <span>{lang.flag}</span>
                         <span>{lang.name}</span>
                       </div>
-                      {i18n.language === lang.code && <Check className="w-4 h-4 text-primary" />}
+                      {i18n.language.startsWith(lang.code) && <Check className="w-4 h-4 text-primary" />}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -197,12 +197,12 @@ const Header = () => {
 
                 <div className="mt-4 pt-6 border-t border-border flex flex-col gap-4">
                   <div className="flex items-center justify-between px-3">
-                    <span className="text-sm font-semibold text-muted-foreground">{i18n.language === 'es' ? 'Lenguaje' : 'Language'}</span>
+                    <span className="text-sm font-semibold text-muted-foreground">{t("common.language")}</span>
                     <div className="flex gap-2">
                       {languages.map((lang) => (
                         <Button
                           key={lang.code}
-                          variant={i18n.language === lang.code ? "default" : "outline"}
+                          variant={i18n.language.startsWith(lang.code) ? "default" : "outline"}
                           size="sm"
                           onClick={() => toggleLanguage(lang.code)}
                           className="gap-2 h-9"
@@ -221,7 +221,7 @@ const Header = () => {
 
                   <Button variant="soul" size="lg" asChild className="w-full h-14 text-lg">
                     <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                      {i18n.language === 'es' ? 'Contáctanos Ahora' : 'Contact Us Now'}
+                      {t("common.contactUsNow")}
                     </Link>
                   </Button>
                 </div>

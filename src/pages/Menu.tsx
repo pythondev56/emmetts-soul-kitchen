@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import friedCatfish from "@/assets/fried-catfish.png";
@@ -7,81 +8,83 @@ import meatloaf from "@/assets/meatloaf.png";
 import bbqRibs from "@/assets/bbq-ribs.png";
 import potRoast from "@/assets/pot-roast.png";
 
-const soulFoodMeats = [
-  {
-    name: "Bagre",
-    description: "Filetes de bagre dorados y crujientes sazonados a la perfección.",
-    featured: true,
-    emoji: "🐟",
-    image: friedCatfish
-  },
-  {
-    name: "Pollo Frito",
-    description: "Nuestro pollo frito dorado signature, jugoso y sabroso.",
-    featured: true,
-    emoji: "🍗"
-  },
-  {
-    name: "Pastel de Carne",
-    description: "Pastel de carne casero cubierto con salsa sabrosa.",
-    featured: true,
-    emoji: "🥩",
-    image: meatloaf
-  },
-  {
-    name: "Hígados de Pollo",
-    description: "Hígados de pollo tiernos perfectamente sazonados y fritos.",
-    featured: true,
-    emoji: "🥘"
-  },
-  {
-    name: "Mollejas",
-    description: "Mollejas fritas crujientes, un verdadero clásico de comida soul.",
-    featured: true,
-    emoji: "🍲"
-  },
-  {
-    name: "Chuletas de Cerdo Estofadas",
-    description: "Chuletas de cerdo tiernas estofadas en rica salsa de cebolla.",
-    emoji: "🥩"
-  },
-  {
-    name: "Pollo al Horno con Arroz",
-    description: "Pollo sazonado horneado lento servido sobre arroz esponjoso.",
-    emoji: "🍚"
-  },
-  {
-    name: "Puntas de Costilla BBQ",
-    description: "Puntas de costilla tiernas bañadas en nuestra salsa BBQ signature.",
-    emoji: "🍖",
-    image: bbqRibs
-  },
-  {
-    name: "Rabos de Buey",
-    description: "Rabos de buey tiernos hasta el hueso en una salsa rica y sabrosa.",
-    emoji: "🥣",
-    image: potRoast
-  },
-  {
-    name: "Chuletas de Cerdo Fritas",
-    description: "Chuletas de cerdo perfectamente sazonadas y fritas.",
-    emoji: "🥩"
-  },
-];
-
-const soulFoodSides = [
-  "Mac & Cheese 🧀",
-  "Hojas de Col 🥬",
-  "Camotes Confitados 🍠",
-  "Ejotes 🫛",
-  "Puré de Papa 🥔",
-  "Repollo 🥬",
-  "Frijoles de Ojo Negro 🫘",
-  "Ensalada de Col 🥗",
-  "Elote en Mazorca 🌽",
-];
-
 const Menu = () => {
+  const { t } = useTranslation();
+
+  const soulFoodMeats = [
+    {
+      name: t("menuPage.meats.catfish"),
+      description: t("menuPage.meats.catfishDesc"),
+      featured: true,
+      emoji: "🐟",
+      image: friedCatfish
+    },
+    {
+      name: t("menuPage.meats.friedChicken"),
+      description: t("menuPage.meats.chickenDesc"),
+      featured: true,
+      emoji: "🍗"
+    },
+    {
+      name: t("menuPage.meats.meatloaf"),
+      description: t("menuPage.meats.meatloafDesc"),
+      featured: true,
+      emoji: "🥩",
+      image: meatloaf
+    },
+    {
+      name: t("menuPage.meats.chickenLivers"),
+      description: t("menuPage.meats.liversDesc"),
+      featured: true,
+      emoji: "🥘"
+    },
+    {
+      name: t("menuPage.meats.gizzards"),
+      description: t("menuPage.meats.gizzardsDesc"),
+      featured: true,
+      emoji: "🍲"
+    },
+    {
+      name: t("menuPage.meats.porkChops"),
+      description: t("menuPage.meats.chopsDesc"),
+      emoji: "🥩"
+    },
+    {
+      name: t("menuPage.meats.bakedChicken"),
+      description: t("menuPage.meats.bakedChickenDesc"),
+      emoji: "🍚"
+    },
+    {
+      name: t("menuPage.meats.ribTips"),
+      description: t("menuPage.meats.ribTipsDesc"),
+      emoji: "🍖",
+      image: bbqRibs
+    },
+    {
+      name: t("menuPage.meats.oxtails"),
+      description: t("menuPage.meats.oxtailsDesc"),
+      emoji: "🥣",
+      image: potRoast
+    },
+    {
+      name: t("menuPage.meats.friedChops"),
+      description: t("menuPage.meats.friedChopsDesc"),
+      emoji: "🥩"
+    },
+  ];
+
+  const soulFoodSides = [
+    t("menuPage.sides.macCheese"),
+    t("menuPage.sides.collardGreens"),
+    t("menuPage.sides.candiedYams"),
+    t("menuPage.sides.greenBeans"),
+    t("menuPage.sides.mashedPotatoes"),
+    t("menuPage.sides.cabbage"),
+    t("menuPage.sides.blackEyedPeas"),
+    t("menuPage.sides.coleSlaw"),
+    t("menuPage.sides.cornOnCob"),
+  ];
+
   return (
     <Layout>
       {/* Hero */}
@@ -94,14 +97,14 @@ const Menu = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-heading text-5xl md:text-7xl font-black mb-6 drop-shadow-lg">
-              Menú de Comida Soul
+              {t("menuPage.title")}
             </h1>
             <div className="bg-white/20 backdrop-blur-md inline-block px-8 py-4 rounded-2xl border border-white/30">
               <p className="text-2xl md:text-3xl font-bold">
-                Carne más 1, 2 o 3 Acompañamientos
+                {t("menuPage.subtitle")}
               </p>
               <p className="text-lg opacity-90 mt-1 font-medium italic">
-                El menú cambia diaria/semanalmente
+                {t("menuPage.dailyNotice")}
               </p>
             </div>
           </motion.div>
@@ -118,7 +121,7 @@ const Menu = () => {
               <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
                 <span className="text-4xl">🍗</span>
                 <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
-                  Carnes Soul Food y Más
+                  {t("menuPage.meatsTitle")}
                 </h2>
               </div>
 
@@ -153,7 +156,7 @@ const Menu = () => {
                               {item.name}
                               {item.featured && (
                                 <span className="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-tighter">
-                                  Especialidad
+                                  {t("menuPage.meats.specialty")}
                                 </span>
                               )}
                             </h3>
@@ -175,7 +178,7 @@ const Menu = () => {
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-primary/20 pb-4">
                   <span className="text-4xl">🥬</span>
                   <h2 className="font-heading text-3xl font-black text-foreground uppercase tracking-tight">
-                    Acompañamientos Soul Food
+                    {t("menuPage.sidesTitle")}
                   </h2>
                 </div>
 
@@ -196,9 +199,9 @@ const Menu = () => {
                 </ul>
 
                 <div className="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                  <p className="text-sm font-bold text-primary uppercase mb-2">Aviso</p>
+                  <p className="text-sm font-bold text-primary uppercase mb-2">{t("common.notice")}</p>
                   <p className="text-muted-foreground text-sm italic">
-                    Todas las comidas vienen con tu elección de carne y 1, 2 o 3 acompañamientos. Pan de maíz incluido con cada comida.
+                    {t("menuPage.orderNotice")}
                   </p>
                 </div>
               </div>
@@ -207,7 +210,7 @@ const Menu = () => {
 
           <div className="text-center mt-20">
             <Button variant="soul" size="xl" asChild className="px-12 py-8 text-xl rounded-full shadow-2xl hover:scale-105 transition-transform">
-              <Link to="/contact">Contactar Ahora Para Ordenar</Link>
+              <Link to="/contact">{t("common.contactToOrder")}</Link>
             </Button>
           </div>
         </div>

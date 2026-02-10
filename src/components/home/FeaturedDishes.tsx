@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import friedCatfish from "@/assets/fried-catfish.png";
 import bbqRibs from "@/assets/bbq-ribs.png";
@@ -7,35 +8,37 @@ import potRoast from "@/assets/pot-roast.png";
 import meatloaf from "@/assets/meatloaf.png";
 import macCheese from "@/assets/mac-cheese.jpg";
 
-const dishes = [
-  {
-    name: "Bagre Frito Dorado",
-    description: "Filetes crujientes y sazonados con un toque soul",
-    image: friedCatfish,
-  },
-  {
-    name: "Pastel de Carne Sabroso",
-    description: "Pan casero con un glaseado rico y picante",
-    image: meatloaf,
-  },
-  {
-    name: "Costillas BBQ Signature",
-    description: "Tiernas hasta el hueso y perfectamente glaseadas",
-    image: bbqRibs,
-  },
-  {
-    name: "Pot Roast Cocido Lento",
-    description: "Carne tierna con salsa rica y vegetales abundantes",
-    image: potRoast,
-  },
-  {
-    name: "Mac & Cheese Cremoso",
-    description: "Confort sureño rico y quesoso en cada bocado",
-    image: macCheese,
-  },
-];
-
 const FeaturedDishes = () => {
+  const { t } = useTranslation();
+
+  const dishes = [
+    {
+      name: t("featured.dishes.catfish.name"),
+      description: t("featured.dishes.catfish.description"),
+      image: friedCatfish,
+    },
+    {
+      name: t("featured.dishes.meatloaf.name"),
+      description: t("featured.dishes.meatloaf.description"),
+      image: meatloaf,
+    },
+    {
+      name: t("featured.dishes.ribs.name"),
+      description: t("featured.dishes.ribs.description"),
+      image: bbqRibs,
+    },
+    {
+      name: t("featured.dishes.potRoast.name"),
+      description: t("featured.dishes.potRoast.description"),
+      image: potRoast,
+    },
+    {
+      name: t("featured.dishes.macCheese.name"),
+      description: t("featured.dishes.macCheese.description"),
+      image: macCheese,
+    },
+  ];
+
   return (
     <section className="section-padding bg-background">
       <div className="container-custom">
@@ -46,9 +49,9 @@ const FeaturedDishes = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="text-accent font-semibold mb-2">Nuestros Favoritos</p>
+          <p className="text-accent font-semibold mb-2">{t("featured.tagline")}</p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-            Platos Destacados
+            {t("featured.title")}
           </h2>
         </motion.div>
 
@@ -91,7 +94,7 @@ const FeaturedDishes = () => {
           className="text-center mt-10"
         >
           <Button variant="soul" size="lg" asChild>
-            <Link to="/menu">Ver Menú Completo</Link>
+            <Link to="/menu">{t("featured.viewAll")}</Link>
           </Button>
         </motion.div>
       </div>

@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -29,13 +32,13 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-highlight font-semibold text-lg mb-4 tracking-wide uppercase"
           >
-            Cocina Auténtica de Comida Soul
+            {t("hero.tagline")}
           </motion.p>
 
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-            Comida Soul Real.{" "}
-            <span className="text-highlight">Sabor Real.</span>{" "}
-            Amor Real.
+            {t("hero.title1")}{" "}
+            <span className="text-highlight">{t("hero.title2")}</span>{" "}
+            {t("hero.title3")}
           </h1>
 
           <motion.p
@@ -44,7 +47,7 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 drop-shadow"
           >
-            Sirviendo deliciosa comida soul hecha fresca con tradición, pasión y sabor auténtico.
+            {t("hero.description")}
           </motion.p>
 
           <motion.div
@@ -55,12 +58,12 @@ const Hero = () => {
           >
             <Button variant="hero" size="xl" asChild>
               <Link to="/contact">
-                🔴 Contactar Ahora
+                {t("hero.contactBtn")}
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <Link to="/menu">
-                🟠 Ver Menú
+                {t("hero.menuBtn")}
               </Link>
             </Button>
           </motion.div>

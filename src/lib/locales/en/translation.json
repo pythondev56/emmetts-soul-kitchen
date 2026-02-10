@@ -10,5 +10,128 @@
   "contact": "Contact",
   "stickyOrderCTA": "Order Now",
   "seoTitle": "Emmett's Soul Kitchen - Authentic Soul Food",
-  "seoDescription": "Enjoy authentic soul food at Emmett's Soul Kitchen. Delicious dishes, exceptional service, and an unforgettable dining experience."
+  "seoDescription": "Enjoy authentic soul food at Emmett's Soul Kitchen. Delicious dishes, exceptional service, and an unforgettable dining experience.",
+  "hero": {
+    "tagline": "Authentic Soul Food Kitchen",
+    "title1": "Real Soul Food.",
+    "title2": "Real Flavor.",
+    "title3": "Real Love.",
+    "description": "Serving delicious soul food made fresh with tradition, passion, and authentic flavor.",
+    "contactBtn": "🔴 Contact Now",
+    "menuBtn": "🟠 View Menu"
+  },
+  "featured": {
+    "tagline": "Our Favorites",
+    "title": "Featured Dishes",
+    "viewAll": "View Full Menu",
+    "dishes": {
+      "catfish": {
+        "name": "Golden Fried Catfish",
+        "description": "Crispy and seasoned fillets with a soul touch"
+      },
+      "meatloaf": {
+        "name": "Savory Meatloaf",
+        "description": "Homemade loaf with a rich and tangy glaze"
+      },
+      "ribs": {
+        "name": "Signature BBQ Ribs",
+        "description": "Fall-off-the-bone tender and perfectly glazed"
+      },
+      "potRoast": {
+        "name": "Slow-Cooked Pot Roast",
+        "description": "Tender beef with rich gravy and hearty vegetables"
+      },
+      "macCheese": {
+        "name": "Creamy Mac & Cheese",
+        "description": "Rich and cheesy Southern comfort in every bite"
+      }
+    }
+  },
+  "footer": {
+    "description": "Authentic homemade soul food served fresh with tradition, passion, and authentic flavor.",
+    "quickLinks": "Quick Links",
+    "serviceAreas": "Service Areas",
+    "contactUs": "Contact Us",
+    "allRightsReserved": "All rights reserved."
+  },
+  "location": {
+    "formerPanda": "Located in the FORMER Panda Chinese Restaurant location"
+  },
+  "common": {
+    "comingSoon": "Coming Soon",
+    "language": "Language",
+    "contactUsNow": "Contact Us Now",
+    "notice": "Notice",
+    "contactToOrder": "Contact Now To Order"
+  },
+  "veteran": {
+    "title": "Veteran Owned & Operated",
+    "title1": "Owned by ",
+    "title2": "Veterans",
+    "title3": " & Operated",
+    "quote": "\"Proudly serving our community with honor, integrity, and the best soul food in Tennessee.\""
+  },
+  "service": {
+    "hours": "Operating Hours",
+    "days": "Friday to Monday",
+    "weekNotice": "(First week hours)",
+    "servingNotice": "Serving surrounding counties and cities"
+  },
+  "menuPage": {
+    "title": "Soul Food Menu",
+    "subtitle": "Meat plus 1, 2 or 3 Sides",
+    "dailyNotice": "Menu changes daily/weekly",
+    "meatsTitle": "Soul Food Meats & More",
+    "sidesTitle": "Soul Food Sides",
+    "meats": {
+      "catfish": "Catfish",
+      "catfishDesc": "Golden and crispy catfish fillets seasoned to perfection.",
+      "friedChicken": "Fried Chicken",
+      "chickenDesc": "Our signature golden fried chicken, juicy and flavorful.",
+      "meatloaf": "Meatloaf",
+      "meatloafDesc": "Homemade meatloaf topped with savory glaze.",
+      "chickenLivers": "Chicken Livers",
+      "liversDesc": "Tender chicken livers perfectly seasoned and fried.",
+      "gizzards": "Gizzards",
+      "gizzardsDesc": "Crispy fried gizzards, a true soul food classic.",
+      "porkChops": "Smothered Pork Chops",
+      "chopsDesc": "Tender pork chops smothered in rich onion gravy.",
+      "bakedChicken": "Baked Chicken with Rice",
+      "bakedChickenDesc": "Slow-baked seasoned chicken served over fluffy rice.",
+      "ribTips": "BBQ Rib Tips",
+      "ribTipsDesc": "Tender rib tips smothered in our signature BBQ sauce.",
+      "oxtails": "Oxtails",
+      "oxtailsDesc": "Fall-off-the-bone tender oxtails in a rich and savory gravy.",
+      "friedChops": "Fried Pork Chops",
+      "friedChopsDesc": "Perfectly seasoned and fried pork chops.",
+      "specialty": "Specialty"
+    },
+    "sides": {
+      "macCheese": "Mac & Cheese 🧀",
+      "collardGreens": "Collard Greens 🥬",
+      "candiedYams": "Candied Yams 🍠",
+      "greenBeans": "Green Beans 🫛",
+      "mashedPotatoes": "Mashed Potatoes 🥔",
+      "cabbage": "Cabbage 🥬",
+      "blackEyedPeas": "Black Eyed Peas 🫘",
+      "coleSlaw": "Cole Slaw 🥗",
+      "cornOnCob": "Corn on the Cob 🌽"
+    },
+    "orderNotice": "All meals come with your choice of meat and 1, 2 or 3 sides. Cornbread included with every meal."
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "Have questions? We'd love to hear from you. Write to us whenever you want!",
+    "getInTouch": "Get in Touch",
+    "phone": "Phone",
+    "email": "Email",
+    "sendMessage": "Send us a Message",
+    "yourName": "Your Name",
+    "phoneLabel": "Phone Number",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "sendBtn": "Send Message",
+    "successTitle": "Message Sent!",
+    "successDesc": "We'll get back to you as soon as possible."
+  }
 }

@@ -21,14 +21,14 @@ i18n
   .init({
     resources,
     fallbackLng: 'es', // Set Spanish as the default fallback language
-    lng: 'es', // Ensure Spanish is the initial language
+    supportedLngs: ['en', 'es'],
     debug: true, // Enable debug mode for development
 
     interpolation: {
       escapeValue: false, // React already escapes by default
     },
     detection: {
-      order: ['navigator', 'htmlTag', 'path', 'subdomain'],
+      order: ['localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
       caches: ['localStorage'],
     },
   });

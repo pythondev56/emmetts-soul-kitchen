@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 
 const serviceAreas = [
@@ -14,6 +15,8 @@ const serviceAreas = [
 ];
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container-custom py-8 md:py-16">
@@ -22,7 +25,7 @@ const Footer = () => {
           <div className="col-span-2 lg:col-span-1 space-y-4">
             <img src={logo} alt="Ms. Emmett's Soul Food" className="h-16 md:h-24 w-auto" />
             <p className="text-secondary-foreground/80 text-xs md:text-sm leading-relaxed">
-              Comida soul auténtica y casera servida fresca con tradición, pasión y sabor auténtico.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               <a
@@ -46,20 +49,20 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">Enlaces Rápidos</h4>
+            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">{t("footer.quickLinks")}</h4>
             <nav className="space-y-2 md:space-y-3">
-              <Link to="/" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Inicio</Link>
-              <Link to="/menu" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Menú</Link>
-              <Link to="/catering" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Catering</Link>
-              <Link to="/order" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Ordenar en Línea</Link>
-              <Link to="/about" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Nosotros</Link>
-              <Link to="/contact" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">Contacto</Link>
+              <Link to="/" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">{t("home")}</Link>
+              <Link to="/menu" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">{t("menu")}</Link>
+              <Link to="/catering" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">{t("catering")}</Link>
+              <Link to="/order" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">{t("order")}</Link>
+              <Link to="/about" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">{t("about")}</Link>
+              <Link to="/contact" className="block text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors">{t("contact")}</Link>
             </nav>
           </div>
 
           {/* Service Areas */}
           <div>
-            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">Áreas de Servicio</h4>
+            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">{t("footer.serviceAreas")}</h4>
             <ul className="space-y-1 md:space-y-2">
               {serviceAreas.map((area) => (
                 <li key={area} className="text-secondary-foreground/80 text-xs md:text-sm flex items-center gap-2">
@@ -72,7 +75,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">Contáctanos</h4>
+            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">{t("footer.contactUs")}</h4>
             <div className="space-y-3 md:space-y-4">
               <a
                 href="tel:+16152308868"
@@ -93,7 +96,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-secondary-foreground/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center text-secondary-foreground/60 text-xs md:text-sm">
-          <p>© {new Date().getFullYear()} Ms. Emmett's Soul Food. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Ms. Emmett's Soul Food. {t("footer.allRightsReserved")}</p>
         </div>
       </div>
     </footer>

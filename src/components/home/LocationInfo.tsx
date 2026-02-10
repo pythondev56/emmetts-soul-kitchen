@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const LocationInfo = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="section-padding bg-highlight/30">
       <div className="container-custom">
@@ -19,7 +22,7 @@ const LocationInfo = () => {
             <p className="text-2xl font-bold text-gray-900 leading-tight">
               682 Nashville Pike<br />
               Gallatin, Tennessee<br />
-              <span className="text-primary mt-2 inline-block">Ubicado en el ANTIGUO local del Restaurante Chino Panda</span>
+              <span className="text-primary mt-2 inline-block">{t("location.formerPanda")}</span>
             </p>
           </div>
         </motion.div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Phone, Mail, MapPin, Send, Clock, Facebook } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -7,18 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 
-const serviceAreas = [
-  "Gallatin, TN",
-  "Springfield, TN",
-  "Hendersonville, TN",
-  "Westmoreland, TN",
-  "Whitehouse, TN",
-  "Bowling Green, KY",
-  "Portland, TN",
-  "Franklin, KY",
-];
-
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -28,11 +19,22 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "¡Mensaje Enviado!",
-      description: "Nos pondremos en contacto contigo lo antes posible.",
+      title: t("contactPage.successTitle"),
+      description: t("contactPage.successDesc"),
     });
     setFormData({ name: "", phone: "", message: "" });
   };
+
+  const serviceAreas = [
+    "Gallatin, TN",
+    "Springfield, TN",
+    "Hendersonville, TN",
+    "Westmoreland, TN",
+    "Whitehouse, TN",
+    "Bowling Green, KY",
+    "Portland, TN",
+    "Franklin, KY",
+  ];
 
   return (
     <Layout>
@@ -45,10 +47,10 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Contáctanos
+              {t("contactPage.title")}
             </h1>
             <p className="text-secondary-foreground/80 max-w-xl mx-auto">
-              ¿Tienes preguntas? Nos encantaría saber de ti. ¡Escríbenos cuando quieras!
+              {t("contactPage.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -66,7 +68,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="font-heading text-3xl font-bold text-foreground mb-8">
-                Ponte en Contacto
+                {t("contactPage.getInTouch")}
               </h2>
 
               <div className="space-y-6">
@@ -78,7 +80,7 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Teléfono</p>
+                    <p className="font-semibold text-foreground">{t("contactPage.phone")}</p>
                     <p className="text-muted-foreground">(615) 230-8868</p>
                   </div>
                 </a>
@@ -91,7 +93,7 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Correo Electrónico</p>
+                    <p className="font-semibold text-foreground">{t("contactPage.email")}</p>
                     <p className="text-muted-foreground">Info@emmettsoulfood.com</p>
                   </div>
                 </a>
@@ -116,7 +118,7 @@ const Contact = () => {
               <div className="mt-10">
                 <h3 className="font-heading text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-accent" />
-                  Áreas de Servicio
+                  {t("footer.serviceAreas")}
                 </h3>
                 <div className="grid grid-cols-2 gap-2">
                   {serviceAreas.map((area) => (
@@ -137,13 +139,13 @@ const Contact = () => {
             >
               <div className="bg-card rounded-2xl p-8 shadow-warm">
                 <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
-                  Envíanos un Mensaje
+                  {t("contactPage.sendMessage")}
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Tu Nombre
+                      {t("contactPage.yourName")}
                     </label>
                     <Input
                       type="text"
@@ -157,7 +159,7 @@ const Contact = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Número de Teléfono
+                      {t("contactPage.phoneLabel")}
                     </label>
                     <Input
                       type="tel"
@@ -171,19 +173,19 @@ const Contact = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Mensaje
+                      {t("contactPage.messageLabel")}
                     </label>
                     <Textarea
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="¿Cómo podemos ayudarte?"
+                      placeholder={t("contactPage.messagePlaceholder")}
                       required
                       rows={5}
                     />
                   </div>
 
                   <Button type="submit" variant="soul" size="lg" className="w-full">
-                    Enviar Mensaje
+                    {t("contactPage.sendBtn")}
                     <Send className="w-4 h-4 ml-2" />
                   </Button>
                 </form>

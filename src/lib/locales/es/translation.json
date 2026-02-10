@@ -10,5 +10,128 @@
   "contact": "Contacto",
   "stickyOrderCTA": "Ordenar Ahora",
   "seoTitle": "Emmett's Soul Kitchen - Auténtica Comida Soul",
-  "seoDescription": "Disfruta de la auténtica comida soul en Emmett's Soul Kitchen. Platos deliciosos, servicio excepcional y una experiencia culinaria inolvidable."
+  "seoDescription": "Disfruta de la auténtica comida soul en Emmett's Soul Kitchen. Platos deliciosos, servicio excepcional y una experiencia culinaria inolvidable.",
+  "hero": {
+    "tagline": "Cocina Auténtica de Comida Soul",
+    "title1": "Comida Soul Real.",
+    "title2": "Sabor Real.",
+    "title3": "Amor Real.",
+    "description": "Sirviendo deliciosa comida soul hecha fresca con tradición, pasión y sabor auténtico.",
+    "contactBtn": "🔴 Contactar Ahora",
+    "menuBtn": "🟠 Ver Menú"
+  },
+  "featured": {
+    "tagline": "Nuestros Favoritos",
+    "title": "Platos Destacados",
+    "viewAll": "Ver Menú Completo",
+    "dishes": {
+      "catfish": {
+        "name": "Bagre Frito Dorado",
+        "description": "Filetes crujientes y sazonados con un toque soul"
+      },
+      "meatloaf": {
+        "name": "Pastel de Carne Sabroso",
+        "description": "Pan casero con un glaseado rico y picante"
+      },
+      "ribs": {
+        "name": "Costillas BBQ Signature",
+        "description": "Tiernas hasta el hueso y perfectamente glaseadas"
+      },
+      "potRoast": {
+        "name": "Pot Roast Cocido Lento",
+        "description": "Carne tierna con salsa rica y vegetales abundantes"
+      },
+      "macCheese": {
+        "name": "Mac & Cheese Cremoso",
+        "description": "Confort sureño rico y quesoso en cada bocado"
+      }
+    }
+  },
+  "footer": {
+    "description": "Comida soul auténtica y casera servida fresca con tradición, pasión y sabor auténtico.",
+    "quickLinks": "Enlaces Rápidos",
+    "serviceAreas": "Áreas de Servicio",
+    "contactUs": "Contáctanos",
+    "allRightsReserved": "Todos los derechos reservados."
+  },
+  "location": {
+    "formerPanda": "Ubicado en el ANTIGUO local del Restaurante Chino Panda"
+  },
+  "common": {
+    "comingSoon": "Próximamente",
+    "language": "Lenguaje",
+    "contactUsNow": "Contáctanos Ahora",
+    "notice": "Aviso",
+    "contactToOrder": "Contactar Ahora Para Ordenar"
+  },
+  "veteran": {
+    "title": "Propiedad de Veteranos y Operado",
+    "title1": "Propiedad de ",
+    "title2": "Veteranos",
+    "title3": " y Operado",
+    "quote": "\"Sirviendo orgullosamente a nuestra comunidad con honor, integridad y la mejor comida soul en Tennessee.\""
+  },
+  "service": {
+    "hours": "Horario de Atención",
+    "days": "Viernes a Lunes",
+    "weekNotice": "(Horario de la primera semana)",
+    "servingNotice": "Sirviendo a condados y ciudades circundantes"
+  },
+  "menuPage": {
+    "title": "Menú de Comida Soul",
+    "subtitle": "Carne más 1, 2 o 3 Acompañamientos",
+    "dailyNotice": "El menú cambia diaria/semanalmente",
+    "meatsTitle": "Carnes Soul Food y Más",
+    "sidesTitle": "Acompañamientos Soul Food",
+    "meats": {
+      "catfish": "Bagre",
+      "catfishDesc": "Filetes de bagre dorados y crujientes sazonados a la perfección.",
+      "friedChicken": "Pollo Frito",
+      "chickenDesc": "Nuestro pollo frito dorado signature, jugoso y sabroso.",
+      "meatloaf": "Pastel de Carne",
+      "meatloafDesc": "Pastel de carne casero cubierto con salsa sabrosa.",
+      "chickenLivers": "Hígados de Pollo",
+      "liversDesc": "Hígados de pollo tiernos perfectamente sazonados y fritos.",
+      "gizzards": "Mollejas",
+      "gizzardsDesc": "Mollejas fritas crujientes, un verdadero clásico de comida soul.",
+      "porkChops": "Chuletas de Cerdo Estofadas",
+      "chopsDesc": "Chuletas de cerdo tiernas estofadas en rica salsa de cebolla.",
+      "bakedChicken": "Pollo al Horno con Arroz",
+      "bakedChickenDesc": "Pollo sazonado horneado lento servido sobre arroz esponjoso.",
+      "ribTips": "Puntas de Costilla BBQ",
+      "ribTipsDesc": "Puntas de costilla tiernas bañadas en nuestra salsa BBQ signature.",
+      "oxtails": "Rabos de Buey",
+      "oxtailsDesc": "Rabos de buey tiernos hasta el hueso en una salsa rica y sabrosa.",
+      "friedChops": "Chuletas de Cerdo Fritas",
+      "friedChopsDesc": "Chuletas de cerdo perfectamente sazonadas y fritas.",
+      "specialty": "Especialidad"
+    },
+    "sides": {
+      "macCheese": "Mac & Cheese 🧀",
+      "collardGreens": "Hojas de Col 🥬",
+      "candiedYams": "Camotes Confitados 🍠",
+      "greenBeans": "Ejotes 🫛",
+      "mashedPotatoes": "Puré de Papa 🥔",
+      "cabbage": "Repollo 🥬",
+      "blackEyedPeas": "Frijoles de Ojo Negro 🫘",
+      "coleSlaw": "Ensalada de Col 🥗",
+      "cornOnCob": "Elote en Mazorca 🌽"
+    },
+    "orderNotice": "Todas las comidas vienen con tu elección de carne y 1, 2 o 3 acompañamientos. Pan de maíz incluido con cada comida."
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "subtitle": "¿Tienes preguntas? Nos encantaría saber de ti. ¡Escríbenos cuando quieras!",
+    "getInTouch": "Ponte en Contacto",
+    "phone": "Teléfono",
+    "email": "Correo Electrónico",
+    "sendMessage": "Envíanos un Mensaje",
+    "yourName": "Tu Nombre",
+    "phoneLabel": "Número de Teléfono",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "¿Cómo podemos ayudarte?",
+    "sendBtn": "Enviar Mensaje",
+    "successTitle": "¡Mensaje Enviado!",
+    "successDesc": "Nos pondremos en contacto contigo lo antes posible."
+  }
 }

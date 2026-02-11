@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Users, Utensils, Calendar, Check, Phone, Send, ChefHat, PartyPopper } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -87,6 +88,7 @@ const menuOptions = {
 };
 
 const Catering = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -101,8 +103,8 @@ const Catering = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "¡Consulta Recibida!",
-      description: "Nos pondremos en contacto contigo dentro de las 24 horas para discutir tu evento.",
+      title: t("cateringPage.consultationReceived"),
+      description: t("cateringPage.consultationDesc"),
     });
     setFormData({
       name: "",
@@ -132,11 +134,10 @@ const Catering = () => {
               <Calendar className="w-8 h-8 text-highlight" />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Servicios de Catering
+              {t("cateringPage.title")}
             </h1>
             <p className="text-secondary-foreground/90 max-w-2xl mx-auto text-lg">
-              ¡Trae el soul a tu próximo evento! Desde reuniones íntimas hasta grandes celebraciones,
-              haremos que tu ocasión sea inolvidable con auténtica comida soul.
+              {t("cateringPage.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -153,11 +154,10 @@ const Catering = () => {
             className="max-w-2xl mx-auto text-center"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Catering: Disponible Pronto
+              {t("cateringPage.availableSoon")}
             </h2>
             <p className="text-muted-foreground text-lg">
-              Estamos preparando paquetes de catering para llevar la auténtica comida soul de Ms. Emmett a tus eventos especiales.
-              ¡Para consultas, contáctanos directamente!
+              {t("cateringPage.availableDesc")}
             </p>
           </motion.div>
         </div>

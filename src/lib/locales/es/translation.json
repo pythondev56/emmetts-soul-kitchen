@@ -65,10 +65,10 @@
     "contactToOrder": "Contactar Ahora Para Ordenar"
   },
   "veteran": {
-    "title": "Propiedad de Veteranos y Operado",
-    "title1": "Propiedad de ",
-    "title2": "Veteranos",
-    "title3": " y Operado",
+    "title": "Veterano Dueño y Operado",
+    "title1": "Veterano Dueño ",
+    "title2": "&",
+    "title3": " Operado",
     "quote": "\"Sirviendo orgullosamente a nuestra comunidad con honor, integridad y la mejor comida soul en Tennessee.\""
   },
   "service": {
@@ -133,5 +133,58 @@
     "sendBtn": "Enviar Mensaje",
     "successTitle": "¡Mensaje Enviado!",
     "successDesc": "Nos pondremos en contacto contigo lo antes posible."
+  },
+  "galleryPage": {
+    "title": "Galería",
+    "subtitle": "Echa un vistazo a nuestros deliciosos platos y momentos detrás de escena desde la cocina.",
+    "uploadCTA": "📸 ¿Tienes fotos de tu visita? Etiquétanos en ",
+    "categories": {
+      "all": "todas",
+      "food": "comida",
+      "kitchen": "cocina",
+      "customers": "clientes"
+    },
+    "noImages": "No hay imágenes en esta categoría todavía. ¡Vuelve pronto!"
+  },
+  "aboutPage": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Conoce nuestra historia, nuestra misión y lo que hace especial a nuestra comida soul.",
+    "ourStory": "Nuestra Historia",
+    "legacyTitle": "Un Legado de Amor y Sabor",
+    "storyParagraph1": "Ms. Emmett's Soul Food se construyó sobre recetas familiares, profundas raíces sureñas y una pasión por alimentar bien a la gente. Cada comida se cocina fresca, sazonada con amor y servida con orgullo.",
+    "storyParagraph2": "Nuestra cocina continúa la tradición de la auténtica cocina soul que ha pasado de generación en generación. Desde el pollo frito crujiente hasta el cremoso mac & cheese, cada plato cuenta una historia de herencia y hogar.",
+    "storyParagraph3": "Creemos que la comida es más que solo sustento—es una forma de unir a la gente, crear recuerdos y compartir amor. Por eso ponemos nuestro corazón en cada plato que servimos.",
+    "missEmmettTitle": "La Historia de Miss Emmett",
+    "missEmmettText": "El secreto del sazonado soul food de Miss Emmett es simple — ella cocina para ti como si fueras familia.",
+    "missEmmettText2": "Miss Emmett está en la cocina todos los días, cocinando personalmente, tal como su padre le enseñó cuando crecía. Esta comida se prepara con cuidado, tradición y orgullo — de la misma manera que siempre se ha hecho.",
+    "ourMission": "Nuestra Misión",
+    "missionTitle": "Comida que Se Siente como en Casa",
+    "missionDesc": "Entregar comida soul auténtica que se sienta como en casa — cada plato, cada vez. Estamos comprometidos a preservar los sabores y tradiciones que hacen que la cocina sureña sea tan especial, mientras servimos a nuestra comunidad con calidez y hospitalidad.",
+    "difference": "La Diferencia",
+    "differenceTitle": "¿Por qué elegir Ms. Emmett's?",
+    "dailyHomemade": "Casero Diario",
+    "dailyDesc": "Cada plato se prepara fresco cada día usando recetas consagradas.",
+    "qualityIngredients": "Ingredientes de Calidad",
+    "qualityDesc": "Usamos solo los mejores ingredientes para crear sabores auténticos.",
+    "southernRecipes": "Recetas Sureñas Reales",
+    "recipesDesc": "Transmitidas a través de generaciones, nuestras recetas son auténticas.",
+    "noShortcuts": "Sin Atajos",
+    "shortcutsDesc": "Nos tomamos nuestro tiempo para hacerlo bien—porque te mereces lo mejor."
+  },
+  "cateringPage": {
+    "title": "Servicios de Catering",
+    "subtitle": "¡Trae el soul a tu próximo evento! Desde reuniones íntimas hasta grandes celebraciones, haremos que tu ocasión sea inolvidable con auténtica comida soul.",
+    "availableSoon": "Catering: Disponible Pronto",
+    "availableDesc": "Estamos preparando paquetes de catering para llevar la auténtica comida soul de Ms. Emmett a tus eventos especiales. ¡Para consultas, contáctanos directamente!",
+    "familyGathering": "Reunión Familiar",
+    "soulFeastTitle": "Fiesta de Comida Soul",
+    "grandCelebration": "Gran Celebración",
+    "serves": "Sirve",
+    "guests": "invitados",
+    "perfectFor": "Perfecto para reuniones familiares, fiestas de cumpleaños y pequeñas reuniones",
+    "idealFor": "Ideal para fiestas de oficina, eventos de iglesia y celebraciones",
+    "forWeddings": "Para bodas, eventos corporativos y grandes celebraciones",
+    "consultationReceived": "¡Consulta Recibida!",
+    "consultationDesc": "Nos pondremos en contacto contigo dentro de las 24 horas para discutir tu evento."
   }
 }

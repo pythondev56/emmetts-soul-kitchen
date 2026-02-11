@@ -1,18 +1,7 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
-
-const serviceAreas = [
-  "Gallatin, TN",
-  "Springfield, TN",
-  "Hendersonville, TN",
-  "Westmoreland, TN",
-  "Whitehouse, TN",
-  "Bowling Green, KY",
-  "Portland, TN",
-  "Franklin, KY",
-];
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -60,18 +49,6 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Service Areas */}
-          <div>
-            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4">{t("footer.serviceAreas")}</h4>
-            <ul className="space-y-1 md:space-y-2">
-              {serviceAreas.map((area) => (
-                <li key={area} className="text-secondary-foreground/80 text-xs md:text-sm flex items-center gap-2">
-                  <MapPin className="w-3 h-3 text-accent flex-shrink-0" />
-                  <span>{area}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact */}
           <div>

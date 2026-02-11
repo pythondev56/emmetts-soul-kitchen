@@ -66,9 +66,9 @@
   },
   "veteran": {
     "title": "Veteran Owned & Operated",
-    "title1": "Owned by ",
-    "title2": "Veterans",
-    "title3": " & Operated",
+    "title1": "Veteran Owned ",
+    "title2": "&",
+    "title3": " Operated",
     "quote": "\"Proudly serving our community with honor, integrity, and the best soul food in Tennessee.\""
   },
   "service": {
@@ -133,5 +133,58 @@
     "sendBtn": "Send Message",
     "successTitle": "Message Sent!",
     "successDesc": "We'll get back to you as soon as possible."
+  },
+  "galleryPage": {
+    "title": "Gallery",
+    "subtitle": "Check out our delicious dishes and behind-the-scenes moments from the kitchen.",
+    "uploadCTA": "📸 Have photos from your visit? Tag us on ",
+    "categories": {
+      "all": "all",
+      "food": "food",
+      "kitchen": "kitchen",
+      "customers": "customers"
+    },
+    "noImages": "No images in this category yet. Check back soon!"
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "subtitle": "Learn our story, our mission, and what makes our soul food special.",
+    "ourStory": "Our Story",
+    "legacyTitle": "A Legacy of Love and Flavor",
+    "storyParagraph1": "Ms. Emmett's Soul Food was built on family recipes, deep Southern roots, and a passion for feeding people well. Every meal is cooked fresh, seasoned with love, and served with pride.",
+    "storyParagraph2": "Our kitchen continues the tradition of authentic soul food that has been passed down through generations. From crispy fried chicken to creamy mac & cheese, every dish tells a story of heritage and home.",
+    "storyParagraph3": "We believe food is more than just sustenance—it's a way to bring people together, create memories, and share love. That's why we put our heart into every dish we serve.",
+    "missEmmettTitle": "Miss Emmett's Story",
+    "missEmmettText": "The secret to Miss Emmett's soul food seasoning is simple — she cooks for you like you're family.",
+    "missEmmettText2": "Miss Emmett is in the kitchen every day, personally cooking, just as her father taught her growing up. This food is prepared with care, tradition, and pride — the same way it's always been done.",
+    "ourMission": "Our Mission",
+    "missionTitle": "Food That Feels Like Home",
+    "missionDesc": "Delivering authentic soul food that feels like home — every dish, every time. We are committed to preserving the flavors and traditions that make Southern cooking so special, while serving our community with warmth and hospitality.",
+    "difference": "The Difference",
+    "differenceTitle": "Why Choose Ms. Emmett's?",
+    "dailyHomemade": "Daily Homemade",
+    "dailyDesc": "Every dish is prepared fresh daily using time-tested recipes.",
+    "qualityIngredients": "Quality Ingredients",
+    "qualityDesc": "We use only the best ingredients to create authentic flavors.",
+    "southernRecipes": "Real Southern Recipes",
+    "recipesDesc": "Passed down through generations, our recipes are authentic.",
+    "noShortcuts": "No Shortcuts",
+    "shortcutsDesc": "We take our time to do it right—because you deserve the best."
+  },
+  "cateringPage": {
+    "title": "Catering Services",
+    "subtitle": "Bring the soul to your next event! From intimate gatherings to large celebrations, we'll make your occasion unforgettable with authentic soul food.",
+    "availableSoon": "Catering: Available Soon",
+    "availableDesc": "We're preparing catering packages to bring Ms. Emmett's authentic soul food to your special events. For inquiries, contact us directly!",
+    "familyGathering": "Family Gathering",
+    "soulFeastTitle": "Soul Food Feast",
+    "grandCelebration": "Grand Celebration",
+    "serves": "Serves",
+    "guests": "guests",
+    "perfectFor": "Perfect for family gatherings, birthday parties, and small get-togethers",
+    "idealFor": "Ideal for office parties, church events, and celebrations",
+    "forWeddings": "For weddings, corporate events, and large celebrations",
+    "consultationReceived": "Consultation Received!",
+    "consultationDesc": "We'll contact you within 24 hours to discuss your event."
   }
 }

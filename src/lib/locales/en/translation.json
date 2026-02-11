@@ -17,8 +17,8 @@
     "title2": "Real Flavor.",
     "title3": "Real Love.",
     "description": "Serving delicious soul food made fresh with tradition, passion, and authentic flavor.",
-    "contactBtn": "🔴 Contact Now",
-    "menuBtn": "🟠 View Menu"
+    "contactBtn": "Contact Now",
+    "menuBtn": "View Menu"
   },
   "featured": {
     "tagline": "Our Favorites",
@@ -107,15 +107,15 @@
       "specialty": "Specialty"
     },
     "sides": {
-      "macCheese": "Mac & Cheese 🧀",
-      "collardGreens": "Collard Greens 🥬",
-      "candiedYams": "Candied Yams 🍠",
-      "greenBeans": "Green Beans 🫛",
-      "mashedPotatoes": "Mashed Potatoes 🥔",
-      "cabbage": "Cabbage 🥬",
-      "blackEyedPeas": "Black Eyed Peas 🫘",
-      "coleSlaw": "Cole Slaw 🥗",
-      "cornOnCob": "Corn on the Cob 🌽"
+      "macCheese": "Mac & Cheese",
+      "collardGreens": "Collard Greens",
+      "candiedYams": "Candied Yams",
+      "greenBeans": "Green Beans",
+      "mashedPotatoes": "Mashed Potatoes",
+      "cabbage": "Cabbage",
+      "blackEyedPeas": "Black Eyed Peas",
+      "coleSlaw": "Cole Slaw",
+      "cornOnCob": "Corn on the Cob"
     },
     "orderNotice": "All meals come with your choice of meat and 1, 2 or 3 sides. Cornbread included with every meal."
   },
@@ -137,7 +137,7 @@
   "galleryPage": {
     "title": "Gallery",
     "subtitle": "Check out our delicious dishes and behind-the-scenes moments from the kitchen.",
-    "uploadCTA": "📸 Have photos from your visit? Tag us on ",
+    "uploadCTA": "Have photos from your visit? Tag us on ",
     "categories": {
       "all": "all",
       "food": "food",

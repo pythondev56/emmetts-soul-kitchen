@@ -145,9 +145,6 @@ const About = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-8 text-center shadow-md border-b-4 border-primary hover:shadow-xl transition-all group"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
-                  <span className="text-3xl group-hover:scale-110 transition-transform">🍽️</span>
-                </div>
                 <h3 className="font-heading font-bold text-lg text-foreground mb-2">
                   {item.title}
                 </h3>

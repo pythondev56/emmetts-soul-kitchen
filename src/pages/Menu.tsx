@@ -16,60 +16,50 @@ const Menu = () => {
       name: t("menuPage.meats.catfish"),
       description: t("menuPage.meats.catfishDesc"),
       featured: true,
-      emoji: "🐟",
       image: friedCatfish
     },
     {
       name: t("menuPage.meats.friedChicken"),
       description: t("menuPage.meats.chickenDesc"),
-      featured: true,
-      emoji: "🍗"
+      featured: true
     },
     {
       name: t("menuPage.meats.meatloaf"),
       description: t("menuPage.meats.meatloafDesc"),
       featured: true,
-      emoji: "🥩",
       image: meatloaf
     },
     {
       name: t("menuPage.meats.chickenLivers"),
       description: t("menuPage.meats.liversDesc"),
-      featured: true,
-      emoji: "🥘"
+      featured: true
     },
     {
       name: t("menuPage.meats.gizzards"),
       description: t("menuPage.meats.gizzardsDesc"),
-      featured: true,
-      emoji: "🍲"
+      featured: true
     },
     {
       name: t("menuPage.meats.porkChops"),
-      description: t("menuPage.meats.chopsDesc"),
-      emoji: "🥩"
+      description: t("menuPage.meats.chopsDesc")
     },
     {
       name: t("menuPage.meats.bakedChicken"),
-      description: t("menuPage.meats.bakedChickenDesc"),
-      emoji: "🍚"
+      description: t("menuPage.meats.bakedChickenDesc")
     },
     {
       name: t("menuPage.meats.ribTips"),
       description: t("menuPage.meats.ribTipsDesc"),
-      emoji: "🍖",
       image: bbqRibs
     },
     {
       name: t("menuPage.meats.oxtails"),
       description: t("menuPage.meats.oxtailsDesc"),
-      emoji: "🥣",
       image: potRoast
     },
     {
       name: t("menuPage.meats.friedChops"),
-      description: t("menuPage.meats.friedChopsDesc"),
-      emoji: "🥩"
+      description: t("menuPage.meats.friedChopsDesc")
     },
   ];
 
@@ -119,7 +109,6 @@ const Menu = () => {
             {/* Meats Column */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
-                <span className="text-4xl">🍗</span>
                 <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
                   {t("menuPage.meatsTitle")}
                 </h2>
@@ -152,7 +141,6 @@ const Menu = () => {
                         <div className="flex justify-between items-start gap-4">
                           <div className="flex-1">
                             <h3 className="font-heading font-black text-xl text-foreground mb-2 flex items-center gap-2">
-                              <span className="text-2xl">{item.emoji}</span>
                               {item.name}
                               {item.featured && (
                                 <span className="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-tighter">
@@ -176,7 +164,6 @@ const Menu = () => {
             <div className="lg:col-span-1">
               <div className="bg-white rounded-3xl p-8 shadow-warm-lg border-2 border-primary/10 sticky top-24">
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-primary/20 pb-4">
-                  <span className="text-4xl">🥬</span>
                   <h2 className="font-heading text-3xl font-black text-foreground uppercase tracking-tight">
                     {t("menuPage.sidesTitle")}
                   </h2>

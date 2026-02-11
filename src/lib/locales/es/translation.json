@@ -17,8 +17,8 @@
     "title2": "Sabor Real.",
     "title3": "Amor Real.",
     "description": "Sirviendo deliciosa comida soul hecha fresca con tradición, pasión y sabor auténtico.",
-    "contactBtn": "🔴 Contactar Ahora",
-    "menuBtn": "🟠 Ver Menú"
+    "contactBtn": "Contactar Ahora",
+    "menuBtn": "Ver Menú"
   },
   "featured": {
     "tagline": "Nuestros Favoritos",
@@ -107,15 +107,15 @@
       "specialty": "Especialidad"
     },
     "sides": {
-      "macCheese": "Mac & Cheese 🧀",
-      "collardGreens": "Hojas de Col 🥬",
-      "candiedYams": "Camotes Confitados 🍠",
-      "greenBeans": "Ejotes 🫛",
-      "mashedPotatoes": "Puré de Papa 🥔",
-      "cabbage": "Repollo 🥬",
-      "blackEyedPeas": "Frijoles de Ojo Negro 🫘",
-      "coleSlaw": "Ensalada de Col 🥗",
-      "cornOnCob": "Elote en Mazorca 🌽"
+      "macCheese": "Mac & Cheese",
+      "collardGreens": "Hojas de Col",
+      "candiedYams": "Camotes Confitados",
+      "greenBeans": "Ejotes",
+      "mashedPotatoes": "Puré de Papa",
+      "cabbage": "Repollo",
+      "blackEyedPeas": "Frijoles de Ojo Negro",
+      "coleSlaw": "Ensalada de Col",
+      "cornOnCob": "Elote en Mazorca"
     },
     "orderNotice": "Todas las comidas vienen con tu elección de carne y 1, 2 o 3 acompañamientos. Pan de maíz incluido con cada comida."
   },
@@ -137,7 +137,7 @@
   "galleryPage": {
     "title": "Galería",
     "subtitle": "Echa un vistazo a nuestros deliciosos platos y momentos detrás de escena desde la cocina.",
-    "uploadCTA": "📸 ¿Tienes fotos de tu visita? Etiquétanos en ",
+    "uploadCTA": "¿Tienes fotos de tu visita? Etiquétanos en ",
     "categories": {
       "all": "todas",
       "food": "comida",

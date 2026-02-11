@@ -45,7 +45,7 @@ const Order = () => {
               Auténtica comida soul fresca entregada directamente a tu puerta o lista para recoger.
             </p>
             <Button variant="gold" size="xl" asChild>
-              <a href="#order-form">🔴 Empieza Tu Pedido Ahora</a>
+              <a href="#order-form">Empieza Tu Pedido Ahora</a>
             </Button>
           </motion.div>
         </div>

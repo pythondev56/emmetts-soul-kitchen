@@ -186,5 +186,84 @@
     "forWeddings": "For weddings, corporate events, and large celebrations",
     "consultationReceived": "Consultation Received!",
     "consultationDesc": "We'll contact you within 24 hours to discuss your event."
+  },
+  "reviewsPage": {
+    "title": "Customer Reviews",
+    "intro": "See what our customers have to say about Ms. Emmett's Soul Food.",
+    "reviews": [
+      {
+        "name": "Marcus J.",
+        "location": "Gallatin, TN",
+        "text": "Best soul food in the area. No doubt. The fried chicken reminds me of my grandmother's cooking! Every bite is pure comfort.",
+        "rating": 5,
+        "date": "2 weeks ago"
+      },
+      {
+        "name": "Patricia W.",
+        "location": "Hendersonville, TN",
+        "text": "The smothered pork chops are absolutely incredible. Real comfort food with real flavor. I've been coming back every week since I discovered this place.",
+        "rating": 5,
+        "date": "1 month ago"
+      },
+      {
+        "name": "David L.",
+        "location": "Bowling Green, KY",
+        "text": "Worth every mile of the drive. Authentic soul food that tastes like it was made with love. The mac and cheese is the best I've ever had.",
+        "rating": 5,
+        "date": "3 weeks ago"
+      },
+      {
+        "name": "Lisa M.",
+        "location": "Springfield, TN",
+        "text": "Finally found soul food that tastes like home! The chicken and waffles are to die for. I'll definitely order again.",
+        "rating": 5,
+        "date": "1 week ago"
+      },
+      {
+        "name": "James R.",
+        "location": "Westmoreland, TN",
+        "text": "The peach cobbler alone is worth the trip. But everything else is equally amazing. Ms. Emmett's has become our family's go-to place for Sunday dinners.",
+        "rating": 5,
+        "date": "2 months ago"
+      },
+      {
+        "name": "Angela T.",
+        "location": "Portland, TN",
+        "text": "I ordered the oxtails and they were falling off the bone. The service was friendly and the food arrived hot and fresh. 10/10!",
+        "rating": 5,
+        "date": "3 weeks ago"
+      }
+    ],
+    "cta": {
+      "heading": "Ready to Try It Yourself?",
+      "description": "Join thousands of satisfied customers and experience authentic soul food today.",
+      "contactBtn": "Contact Now",
+      "reviewBtn": "Leave a Review"
+    }
+  },
+  "testimonials": {
+    "tagline": "What People Say",
+    "heading": "Customer Love",
+    "items": [
+      {
+        "name": "Marcus J.",
+        "location": "Gallatin, TN",
+        "text": "Best soul food in the area. No doubt. The fried chicken reminds me of my grandmother's cooking!",
+        "rating": 5
+      },
+      {
+        "name": "Patricia W.",
+        "location": "Hendersonville, TN",
+        "text": "The smothered pork chops are absolutely incredible. Real comfort food with real flavor.",
+        "rating": 5
+      },
+      {
+        "name": "David L.",
+        "location": "Bowling Green, KY",
+        "text": "Worth every mile of the drive. Authentic soul food that tastes like it was made with love.",
+        "rating": 5
+      }
+    ],
+    "buttonText": "Read More Reviews"
   }
 }

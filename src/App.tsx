@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Index from "./pages/Index";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order";
@@ -12,30 +12,41 @@ import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
 import Catering from "./pages/Catering";
 import NotFound from "./pages/NotFound";
-import { useTranslation } from 'react-i18next';
-import Layout from "./components/layout/Layout";
+import PageLoader from "./components/PageLoader";
 
 const queryClient = new QueryClient();
+
+const RootLayout = () => (
+  <>
+    <PageLoader />
+    <Outlet />
+  </>
+);
+
+const router = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <Index /> },
+      { path: "/menu", element: <Menu /> },
+      { path: "/menu/:category", element: <Menu /> },
+      { path: "/order", element: <Order /> },
+      { path: "/about", element: <About /> },
+      { path: "/gallery", element: <Gallery /> },
+      { path: "/reviews", element: <Reviews /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/catering", element: <Catering /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/menu/:category" element={<Menu />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/catering" element={<Catering />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </TooltipProvider>
   </QueryClientProvider>
 );

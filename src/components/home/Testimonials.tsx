@@ -1,30 +1,16 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const testimonials = [
-  {
-    name: "Marcus J.",
-    location: "Gallatin, TN",
-    text: "La mejor comida soul de la zona. Sin duda. ¡El pollo frito me recuerda a la cocina de mi abuela!",
-    rating: 5,
-  },
-  {
-    name: "Patricia W.",
-    location: "Hendersonville, TN",
-    text: "Las chuletas de cerdo cubiertas son absolutamente increíbles. Comida reconfortante real con sabor real.",
-    rating: 5,
-  },
-  {
-    name: "David L.",
-    location: "Bowling Green, KY",
-    text: "Vale la pena cada milla del viaje. Auténtica comida soul que sabe como si estuviera hecha con amor.",
-    rating: 5,
-  },
-];
-
 const Testimonials = () => {
+  const { t } = useTranslation();
+  const testimonials = t("testimonials.items", { returnObjects: true }) as Array<{
+    name: string;
+    location: string;
+    text: string;
+  }>;
   return (
     <section className="section-padding bg-secondary text-secondary-foreground">
       <div className="container-custom">
@@ -35,9 +21,9 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="text-accent font-semibold mb-2">Lo Que Dice La Gente</p>
+          <p className="text-accent font-semibold mb-2">{t("testimonials.tagline")}</p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold">
-            Amor de Los Clientes
+            {t("testimonials.heading")}
           </h2>
         </motion.div>
 
@@ -79,7 +65,7 @@ const Testimonials = () => {
           className="text-center mt-10"
         >
           <Button variant="warm" size="lg" asChild>
-            <Link to="/reviews">Leer Más Reseñas</Link>
+            <Link to="/reviews">{t("testimonials.buttonText")}</Link>
           </Button>
         </motion.div>
       </div>

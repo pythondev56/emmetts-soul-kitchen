@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react";
-import { useNavigation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const PageLoader = () => {
-  const navigation = useNavigation();
+  const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Show loader immediately when navigation starts
-    if (navigation.state === "loading") {
-      setIsVisible(true);
-    } else {
-      // Hide loader with a small delay to avoid flickering
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-      }, 200);
-      return () => clearTimeout(timer);
-    }
-  }, [navigation.state]);
+    // Show loader when location changes
+    setIsLoading(true);
+    setIsVisible(true);
+
+    // Hide loader after a minimum duration
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setIsVisible(false);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   if (!isVisible) return null;
 

@@ -20,7 +20,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'es', // Set Spanish as the default fallback language
+    fallbackLng: 'en', // Set English as the default fallback language
     supportedLngs: ['en', 'es'],
     debug: true, // Enable debug mode for development
 

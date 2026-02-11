@@ -1,7 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/home/Hero";
 import FeaturedDishes from "@/components/home/FeaturedDishes";
-import ServiceAreas from "@/components/home/ServiceAreas";
 import FacebookVideos from "@/components/home/FacebookVideos";
 import Testimonials from "@/components/home/Testimonials";
 import LocationInfo from "@/components/home/LocationInfo";
@@ -14,7 +13,6 @@ const Index = () => {
       <FeaturedDishes />
       {/* FacebookVideos section hidden - will be visible when video content is ready */}
       {/* <FacebookVideos /> */}
-      <ServiceAreas />
       {/* Testimonials section hidden - will be visible again when ready */}
       {/* <Testimonials /> */}
       <VeteranOwned />

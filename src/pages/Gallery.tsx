@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
 import friedChicken from "@/assets/fried-chicken.jpg";
 import porkChops from "@/assets/pork-chops.jpg";
@@ -9,20 +10,22 @@ import peachCobbler from "@/assets/peach-cobbler.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const galleryImages = [
-  { src: heroBg, alt: "Plato de comida soul", category: "comida" },
-  { src: friedChicken, alt: "Pollo frito", category: "comida" },
-  { src: porkChops, alt: "Chuletas de cerdo cubiertas", category: "comida" },
-  { src: catfishGrits, alt: "Bagre y sémola (grits)", category: "comida" },
-  { src: macCheese, alt: "Macarrones con queso", category: "comida" },
-  { src: peachCobbler, alt: "Pastel de durazno", category: "comida" },
+  { src: heroBg, alt: "Soul food dish", category: "food" },
+  { src: friedChicken, alt: "Fried chicken", category: "food" },
+  { src: porkChops, alt: "Smothered pork chops", category: "food" },
+  { src: catfishGrits, alt: "Catfish and grits", category: "food" },
+  { src: macCheese, alt: "Mac and cheese", category: "food" },
+  { src: peachCobbler, alt: "Peach cobbler", category: "food" },
 ];
 
-const categories = ["todas", "comida", "cocina", "clientes"];
-
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState("todas");
+  const { t } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const filteredImages = activeCategory === "todas"
+  const categories = [t("galleryPage.categories.all"), t("galleryPage.categories.food"), t("galleryPage.categories.kitchen"), t("galleryPage.categories.customers")];
+  const categoryKeys = ["all", "food", "kitchen", "customers"];
+
+  const filteredImages = activeCategory === "all"
     ? galleryImages
     : galleryImages.filter(img => img.category === activeCategory);
 
@@ -37,10 +40,10 @@ const Gallery = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Galería
+              {t("galleryPage.title")}
             </h1>
             <p className="text-secondary-foreground/80 max-w-xl mx-auto">
-              Echa un vistazo a nuestros deliciosos platos y momentos detrás de escena desde la cocina.
+              {t("galleryPage.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -50,7 +53,7 @@ const Gallery = () => {
       <section className="bg-accent/10 py-4">
         <div className="container-custom text-center">
           <p className="text-muted-foreground text-sm">
-            📸 ¿Tienes fotos de tu visita? Etiquétanos en{" "}
+            {t("galleryPage.uploadCTA")}
             <a
               href="https://www.facebook.com/emmettskitchen"
               target="_blank"
@@ -68,11 +71,11 @@ const Gallery = () => {
       <section className="bg-card py-6 border-b border-border">
         <div className="container-custom">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((cat) => (
+            {categories.map((cat, idx) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2 rounded-full font-semibold capitalize transition-all ${activeCategory === cat
+                onClick={() => setActiveCategory(categoryKeys[idx])}
+                className={`px-6 py-2 rounded-full font-semibold capitalize transition-all ${activeCategory === categoryKeys[idx]
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-muted/80"
                   }`}
@@ -114,7 +117,7 @@ const Gallery = () => {
 
           {filteredImages.length === 0 && (
             <p className="text-center text-muted-foreground py-12">
-              No hay imágenes en esta categoría todavía. ¡Vuelve pronto!
+              {t("galleryPage.noImages")}
             </p>
           )}
         </div>

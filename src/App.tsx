@@ -18,25 +18,31 @@ import Layout from "./components/layout/Layout";
 
 const queryClient = new QueryClient();
 
+const AppRoutes = () => (
+  <>
+    <PageLoader />
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/menu/:category" element={<Menu />} />
+      <Route path="/order" element={<Order />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/reviews" element={<Reviews />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/catering" element={<Catering />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <PageLoader />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/menu/:category" element={<Menu />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/catering" element={<Catering />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AppRoutes />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -186,5 +186,84 @@
     "forWeddings": "Para bodas, eventos corporativos y grandes celebraciones",
     "consultationReceived": "¡Consulta Recibida!",
     "consultationDesc": "Nos pondremos en contacto contigo dentro de las 24 horas para discutir tu evento."
+  },
+  "reviewsPage": {
+    "title": "Reseñas de Clientes",
+    "intro": "Mira lo que nuestros clientes tienen que decir sobre Ms. Emmett's Soul Food.",
+    "reviews": [
+      {
+        "name": "Marcus J.",
+        "location": "Gallatin, TN",
+        "text": "La mejor comida soul de la zona. Sin duda. ¡El pollo frito me recuerda a la cocina de mi abuela! Cada bocado es puro confort.",
+        "rating": 5,
+        "date": "hace 2 semanas"
+      },
+      {
+        "name": "Patricia W.",
+        "location": "Hendersonville, TN",
+        "text": "Las chuletas de cerdo cubiertas son absolutamente increíbles. Comida reconfortante real con sabor real. He estado volviendo cada semana desde que descubrí este lugar.",
+        "rating": 5,
+        "date": "hace 1 mes"
+      },
+      {
+        "name": "David L.",
+        "location": "Bowling Green, KY",
+        "text": "Vale la pena cada milla del viaje. Auténtica comida soul que sabe como si estuviera hecha con amor. Los macarrones con queso son los mejores que he probado.",
+        "rating": 5,
+        "date": "hace 3 semanas"
+      },
+      {
+        "name": "Lisa M.",
+        "location": "Springfield, TN",
+        "text": "¡Finalmente encontré comida soul que sabe a hogar! El pollo y los waffles son para morirse. Definitivamente ordenaré de nuevo.",
+        "rating": 5,
+        "date": "hace 1 semana"
+      },
+      {
+        "name": "James R.",
+        "location": "Westmoreland, TN",
+        "text": "El pastel de durazno por sí solo vale el viaje. Pero todo lo demás es igual de asombroso. Ms. Emmett's se ha convertido en el lugar de referencia de nuestra familia para las cenas de los domingos.",
+        "rating": 5,
+        "date": "hace 2 meses"
+      },
+      {
+        "name": "Angela T.",
+        "location": "Portland, TN",
+        "text": "Pedí los rabos de buey y se deshacían del hueso. El servicio fue amable y la comida llegó caliente y fresca. ¡10/10!",
+        "rating": 5,
+        "date": "hace 3 semanas"
+      }
+    ],
+    "cta": {
+      "heading": "¿Listo para Probarlo Tú Mismo?",
+      "description": "Únete a miles de clientes satisfechos y experimenta la auténtica comida soul hoy.",
+      "contactBtn": "Contactar Ahora",
+      "reviewBtn": "Dejar una Reseña"
+    }
+  },
+  "testimonials": {
+    "tagline": "Lo Que Dice La Gente",
+    "heading": "Amor de Los Clientes",
+    "items": [
+      {
+        "name": "Marcus J.",
+        "location": "Gallatin, TN",
+        "text": "La mejor comida soul de la zona. Sin duda. ¡El pollo frito me recuerda a la cocina de mi abuela!",
+        "rating": 5
+      },
+      {
+        "name": "Patricia W.",
+        "location": "Hendersonville, TN",
+        "text": "Las chuletas de cerdo cubiertas son absolutamente increíbles. Comida reconfortante real con sabor real.",
+        "rating": 5
+      },
+      {
+        "name": "David L.",
+        "location": "Bowling Green, KY",
+        "text": "Vale la pena cada milla del viaje. Auténtica comida soul que sabe como si estuviera hecha con amor.",
+        "rating": 5
+      }
+    ],
+    "buttonText": "Leer Más Reseñas"
   }
 }

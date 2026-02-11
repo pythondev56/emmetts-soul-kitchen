@@ -12,6 +12,7 @@ import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
 import Catering from "./pages/Catering";
 import NotFound from "./pages/NotFound";
+import PageLoader from "./components/PageLoader";
 import { useTranslation } from 'react-i18next';
 import Layout from "./components/layout/Layout";
 
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PageLoader />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<Menu />} />

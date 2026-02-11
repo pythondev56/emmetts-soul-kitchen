@@ -1,54 +1,17 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
-const reviews = [
-  {
-    name: "Marcus J.",
-    location: "Gallatin, TN",
-    text: "La mejor comida soul de la zona. Sin duda. ¡El pollo frito me recuerda a la cocina de mi abuela! Cada bocado es puro confort.",
-    rating: 5,
-    date: "hace 2 semanas",
-  },
-  {
-    name: "Patricia W.",
-    location: "Hendersonville, TN",
-    text: "Las chuletas de cerdo cubiertas son absolutamente increíbles. Comida reconfortante real con sabor real. He estado volviendo cada semana desde que descubrí este lugar.",
-    rating: 5,
-    date: "hace 1 mes",
-  },
-  {
-    name: "David L.",
-    location: "Bowling Green, KY",
-    text: "Vale la pena cada milla del viaje. Auténtica comida soul que sabe como si estuviera hecha con amor. Los macarrones con queso son los mejores que he probado.",
-    rating: 5,
-    date: "hace 3 semanas",
-  },
-  {
-    name: "Lisa M.",
-    location: "Springfield, TN",
-    text: "¡Finalmente encontré comida soul que sabe a hogar! El pollo y los waffles son para morirse. Definitivamente ordenaré de nuevo.",
-    rating: 5,
-    date: "hace 1 semana",
-  },
-  {
-    name: "James R.",
-    location: "Westmoreland, TN",
-    text: "El pastel de durazno por sí solo vale el viaje. Pero todo lo demás es igual de asombroso. Ms. Emmett's se ha convertido en el lugar de referencia de nuestra familia para las cenas de los domingos.",
-    rating: 5,
-    date: "hace 2 meses",
-  },
-  {
-    name: "Angela T.",
-    location: "Portland, TN",
-    text: "Pedí los rabos de buey y se deshacían del hueso. El servicio fue amable y la comida llegó caliente y fresca. ¡10/10!",
-    rating: 5,
-    date: "hace 3 semanas",
-  },
-];
-
 const Reviews = () => {
+  const { t } = useTranslation();
+  const reviews = t("reviewsPage.reviews", { returnObjects: true }) as Array<{
+    name: string;
+    location: string;
+    text: string;
+    date: string;
+  }>;
   return (
     <Layout>
       {/* Hero */}
@@ -65,10 +28,10 @@ const Reviews = () => {
               ))}
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Reseñas de Clientes
+              {t("reviewsPage.title")}
             </h1>
             <p className="text-secondary-foreground/80 max-w-xl mx-auto">
-              Mira lo que nuestros clientes tienen que decir sobre Ms. Emmett's Soul Food.
+              {t("reviewsPage.intro")}
             </p>
           </motion.div>
         </div>
@@ -122,18 +85,18 @@ const Reviews = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              ¿Listo para Probarlo Tú Mismo?
+              {t("reviewsPage.cta.heading")}
             </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Únete a miles de clientes satisfechos y experimenta la auténtica comida soul hoy.
+              {t("reviewsPage.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="soul" size="lg" asChild>
-                <a href="/contact">Contactar Ahora</a>
+                <a href="/contact">{t("reviewsPage.cta.contactBtn")}</a>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <a href="https://www.facebook.com/emmettskitchen" target="_blank" rel="noopener noreferrer">
-                  Dejar una Reseña
+                  {t("reviewsPage.cta.reviewBtn")}
                 </a>
               </Button>
             </div>

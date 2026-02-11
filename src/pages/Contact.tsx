@@ -25,16 +25,6 @@ const Contact = () => {
     setFormData({ name: "", phone: "", message: "" });
   };
 
-  const serviceAreas = [
-    "Gallatin, TN",
-    "Springfield, TN",
-    "Hendersonville, TN",
-    "Westmoreland, TN",
-    "Whitehouse, TN",
-    "Bowling Green, KY",
-    "Portland, TN",
-    "Franklin, KY",
-  ];
 
   return (
     <Layout>
@@ -114,20 +104,6 @@ const Contact = () => {
                 </a>
               </div>
 
-              {/* Service Areas */}
-              <div className="mt-10">
-                <h3 className="font-heading text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-accent" />
-                  {t("footer.serviceAreas")}
-                </h3>
-                <div className="grid grid-cols-2 gap-2">
-                  {serviceAreas.map((area) => (
-                    <p key={area} className="text-muted-foreground text-sm">
-                      • {area}
-                    </p>
-                  ))}
-                </div>
-              </div>
             </motion.div>
 
             {/* Contact Form */}

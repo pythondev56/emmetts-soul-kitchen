@@ -12,7 +12,8 @@
   "seoTitle": "Emmett's Soul Kitchen - Auténtica Comida Soul",
   "seoDescription": "Disfruta de la auténtica comida soul en Emmett's Soul Kitchen. Platos deliciosos, servicio excepcional y una experiencia culinaria inolvidable.",
   "hero": {
-    "tagline": "Cocina Auténtica de Comida Soul",
+    "tagline": "Alimentando familias, honrando la tradición, un plato a la vez.",
+    "supportingStatement": "Ms. Emmett está en la cocina todos los días, guiando a su familia de la cocina en las tradiciones y sabores en los que fue criada.",
     "title1": "Comida Soul Real.",
     "title2": "Sabor Real.",
     "title3": "Amor Real.",
@@ -117,7 +118,7 @@
       "coleSlaw": "Ensalada de Col",
       "cornOnCob": "Elote en Mazorca"
     },
-    "orderNotice": "Todas las comidas vienen con tu elección de carne y 1, 2 o 3 acompañamientos. Pan de maíz incluido con cada comida."
+    "orderNotice": "Todas las comidas vienen con tu elección de carne y 1, 2 o 3 acompañamientos."
   },
   "contactPage": {
     "title": "Contáctanos",
@@ -163,13 +164,13 @@
     "difference": "La Diferencia",
     "differenceTitle": "¿Por qué elegir Ms. Emmett's?",
     "dailyHomemade": "Casero Diario",
-    "dailyDesc": "Cada plato se prepara fresco cada día usando recetas consagradas.",
-    "qualityIngredients": "Ingredientes de Calidad",
-    "qualityDesc": "Usamos solo los mejores ingredientes para crear sabores auténticos.",
+    "dailyDesc": "Cada plato se hace fresco.",
+    "qualityIngredients": "Ingredientes",
+    "qualityDesc": "¡Y es un secreto!",
     "southernRecipes": "Recetas Sureñas Reales",
     "recipesDesc": "Transmitidas a través de generaciones, nuestras recetas son auténticas.",
     "noShortcuts": "Sin Atajos",
-    "shortcutsDesc": "Nos tomamos nuestro tiempo para hacerlo bien—porque te mereces lo mejor."
+    "shortcutsDesc": "Nos tomamos nuestro tiempo, como en casa."
   },
   "cateringPage": {
     "title": "Servicios de Catering",

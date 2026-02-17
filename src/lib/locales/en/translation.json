@@ -265,5 +265,37 @@
       }
     ],
     "buttonText": "Read More Reviews"
+  },
+  "orderPage": {
+    "title": "Order Online",
+    "description": "Authentic fresh soul food delivered straight to your door or ready to pick up.",
+    "howItWorks": "How It Works",
+    "workingDescription": "Ordering is as easy as 1-2-3-4!",
+    "steps": [
+      {
+        "title": "Choose Your Favorites",
+        "description": "Browse our menu and select your favorite soul food dishes."
+      },
+      {
+        "title": "Customize & Pay",
+        "description": "Add special instructions and complete your payment securely."
+      },
+      {
+        "title": "We Cook Fresh",
+        "description": "Your order is prepared fresh with love and care."
+      },
+      {
+        "title": "Pickup or Delivery",
+        "description": "Pick up your order or have it delivered to your door."
+      }
+    ],
+    "orderCTA": "Start Your Order Now",
+    "sectionTitle": "Delivery: Coming Soon",
+    "sectionDescription": "We're getting ready to bring Ms. Emmett's authentic soul food straight to your door. Stay tuned for updates!",
+    "hasQuestions": "Have questions? Check out our ",
+    "fullMenu": "full menu",
+    "or": " or ",
+    "contactUs": "contact us",
+    "contactUsEnd": "."
   }
 }

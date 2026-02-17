@@ -265,5 +265,37 @@
       }
     ],
     "buttonText": "Leer Más Reseñas"
+  },
+  "orderPage": {
+    "title": "Pide en Línea",
+    "description": "Auténtica comida soul fresca entregada directamente a tu puerta o lista para recoger.",
+    "howItWorks": "Cómo Funciona",
+    "workingDescription": "¡Pedir es tan fácil como 1-2-3-4!",
+    "steps": [
+      {
+        "title": "Elige Tus Favoritos",
+        "description": "Navega por nuestro menú y selecciona tus platos de comida soul favoritos."
+      },
+      {
+        "title": "Personaliza y Paga",
+        "description": "Agrega instrucciones especiales y completa tu pago de forma segura."
+      },
+      {
+        "title": "Cocinamos Fresco",
+        "description": "Tu pedido se prepara fresco con amor y cuidado."
+      },
+      {
+        "title": "Recogida o Entrega",
+        "description": "Recoge tu pedido o haz que te lo entreguen en tu puerta."
+      }
+    ],
+    "orderCTA": "Empieza Tu Pedido Ahora",
+    "sectionTitle": "Entrega: Disponible Pronto",
+    "sectionDescription": "Nos estamos preparando para llevar la auténtica comida soul de Ms. Emmett directamente a tu puerta. ¡Mantente al tanto de las actualizaciones!",
+    "hasQuestions": "¿Tienes preguntas? Revisa nuestro ",
+    "fullMenu": "menú completo",
+    "or": " o ",
+    "contactUs": "contáctanos",
+    "contactUsEnd": "."
   }
 }

@@ -21,6 +21,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en', // Set English as the default fallback language
+    lng: 'en', // Set initial language to English
     supportedLngs: ['en', 'es'],
     debug: true, // Enable debug mode for development
 

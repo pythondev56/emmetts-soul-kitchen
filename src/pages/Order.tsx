@@ -1,33 +1,42 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, CreditCard, Clock, Truck } from "lucide-react";
 
-const steps = [
-  {
-    icon: ShoppingBag,
-    title: "Elige Tus Favoritos",
-    description: "Navega por nuestro menú y selecciona tus platos de comida soul favoritos.",
-  },
-  {
-    icon: CreditCard,
-    title: "Personaliza y Paga",
-    description: "Agrega instrucciones especiales y completa tu pago de forma segura.",
-  },
-  {
-    icon: Clock,
-    title: "Cocinamos Fresco",
-    description: "Tu pedido se prepara fresco con amor y cuidado.",
-  },
-  {
-    icon: Truck,
-    title: "Recogida o Entrega",
-    description: "Recoge tu pedido o haz que te lo entreguen en tu puerta.",
-  },
-];
+const icons = {
+  ShoppingBag,
+  CreditCard,
+  Clock,
+  Truck,
+};
 
 const Order = () => {
+  const { t } = useTranslation();
+  const steps = [
+    {
+      icon: ShoppingBag,
+      title: t("orderPage.steps.0.title"),
+      description: t("orderPage.steps.0.description"),
+    },
+    {
+      icon: CreditCard,
+      title: t("orderPage.steps.1.title"),
+      description: t("orderPage.steps.1.description"),
+    },
+    {
+      icon: Clock,
+      title: t("orderPage.steps.2.title"),
+      description: t("orderPage.steps.2.description"),
+    },
+    {
+      icon: Truck,
+      title: t("orderPage.steps.3.title"),
+      description: t("orderPage.steps.3.description"),
+    },
+  ];
+
   return (
     <Layout>
       {/* Hero */}
@@ -39,13 +48,13 @@ const Order = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Pide en Línea
+              {t("orderPage.title")}
             </h1>
             <p className="text-primary-foreground/90 max-w-xl mx-auto mb-8">
-              Auténtica comida soul fresca entregada directamente a tu puerta o lista para recoger.
+              {t("orderPage.description")}
             </p>
             <Button variant="gold" size="xl" asChild>
-              <a href="#order-form">Empieza Tu Pedido Ahora</a>
+              <a href="#order-form">{t("orderPage.orderCTA")}</a>
             </Button>
           </motion.div>
         </div>
@@ -62,10 +71,10 @@ const Order = () => {
             className="text-center mb-12"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Cómo Funciona
+              {t("orderPage.howItWorks")}
             </h2>
             <p className="text-muted-foreground">
-              ¡Pedir es tan fácil como 1-2-3-4!
+              {t("orderPage.workingDescription")}
             </p>
           </motion.div>
 
@@ -109,22 +118,22 @@ const Order = () => {
           >
             <div className="bg-background rounded-2xl p-8 shadow-warm">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Entrega: Disponible Pronto
+                {t("orderPage.sectionTitle")}
               </h2>
               <p className="text-muted-foreground mb-8">
-                Nos estamos preparando para llevar la auténtica comida soul de Ms. Emmett directamente a tu puerta. ¡Mantente al tanto de las actualizaciones!
+                {t("orderPage.sectionDescription")}
               </p>
 
               <p className="text-sm text-muted-foreground">
-                ¿Tienes preguntas? Revisa nuestro{" "}
+                {t("orderPage.hasQuestions")}
                 <Link to="/menu" className="text-primary hover:underline">
-                  menú completo
-                </Link>{" "}
-                o{" "}
-                <Link to="/contact" className="text-primary hover:underline">
-                  contáctanos
+                  {t("orderPage.fullMenu")}
                 </Link>
-                .
+                {t("orderPage.or")}
+                <Link to="/contact" className="text-primary hover:underline">
+                  {t("orderPage.contactUs")}
+                </Link>
+                {t("orderPage.contactUsEnd")}
               </p>
             </div>
           </motion.div>

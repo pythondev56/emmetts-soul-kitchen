@@ -44,6 +44,15 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-white/80 text-lg md:text-lg max-w-2xl mx-auto mb-6 italic drop-shadow"
+          >
+            {t("hero.supportingStatement")}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 drop-shadow"
           >

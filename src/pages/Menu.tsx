@@ -190,7 +190,7 @@ const Menu = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-card rounded-xl p-3 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
+                className="bg-gradient-to-br from-primary/20 to-highlight/20 rounded-xl p-3 shadow-warm border-2 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:scale-105 transition-all"
               >
                 <div className="flex items-center justify-center min-h-20">
                   <h3 className="font-heading font-bold text-sm text-foreground text-center">
@@ -228,7 +228,7 @@ const Menu = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-card rounded-xl p-3 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
+                className="bg-gradient-to-br from-secondary/20 to-primary/10 rounded-xl p-3 shadow-warm border-2 border-secondary/30 hover:border-secondary/70 hover:shadow-lg hover:scale-105 transition-all"
               >
                 <div className="flex items-center justify-center min-h-20">
                   <h3 className="font-heading font-bold text-sm text-foreground text-center">

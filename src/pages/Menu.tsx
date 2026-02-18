@@ -71,18 +71,6 @@ const Menu = () => {
     description: ""
   }));
 
-  const soulFoodSides = [
-    t("menuPage.sides.macCheese"),
-    t("menuPage.sides.collardGreens"),
-    t("menuPage.sides.candiedYams"),
-    t("menuPage.sides.greenBeans"),
-    t("menuPage.sides.mashedPotatoes"),
-    t("menuPage.sides.cabbage"),
-    t("menuPage.sides.blackEyedPeas"),
-    t("menuPage.sides.coleSlaw"),
-    t("menuPage.sides.cornOnCob"),
-  ];
-
   return (
     <Layout>
       {/* Hero */}
@@ -112,10 +100,10 @@ const Menu = () => {
       {/* Menu Items */}
       <section className="section-padding bg-background relative">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             {/* Meats Column */}
-            <div className="lg:col-span-2">
+            <div>
               <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
                 <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
                   {t("menuPage.meatsTitle")}
@@ -165,40 +153,6 @@ const Menu = () => {
                     </div>
                   </motion.div>
                 ))}
-              </div>
-            </div>
-
-            {/* Sides Column */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-3xl p-8 shadow-warm-lg border-2 border-primary/10 sticky top-24">
-                <div className="flex items-center gap-3 mb-8 border-b-2 border-primary/20 pb-4">
-                  <h2 className="font-heading text-3xl font-black text-foreground uppercase tracking-tight">
-                    {t("menuPage.sidesTitle")}
-                  </h2>
-                </div>
-
-                <ul className="space-y-4">
-                  {soulFoodSides.map((side, index) => (
-                    <motion.li
-                      key={side}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      className="text-xl font-bold text-gray-800 flex items-center gap-3 hover:text-primary transition-colors cursor-default"
-                    >
-                      <span className="w-2 h-2 bg-primary rounded-full" />
-                      {side}
-                    </motion.li>
-                  ))}
-                </ul>
-
-                <div className="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                  <p className="text-sm font-bold text-primary uppercase mb-2">{t("common.notice")}</p>
-                  <p className="text-muted-foreground text-sm italic">
-                    {t("menuPage.orderNotice")}
-                  </p>
-                </div>
               </div>
             </div>
           </div>

@@ -202,6 +202,75 @@ const Menu = () => {
           </div>
         </div>
       </section>
+
+      {/* Sides & Meats Card Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-primary/5 to-highlight/5 rounded-3xl p-12 shadow-warm-lg border-2 border-primary/20">
+              <div className="flex items-center gap-3 mb-12 border-b-4 border-primary pb-6">
+                <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground uppercase tracking-tight">
+                  {t("menuPage.sidesAndMeatsTitle")}
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {/* Soul Food Meats */}
+                <div>
+                  <h3 className="font-heading text-2xl font-black text-primary mb-6 uppercase">Soul Food Meats</h3>
+                  <ul className="space-y-3">
+                    {t("menuPage.allMeats", { returnObjects: true }).map((meat: string, index: number) => (
+                      <motion.li
+                        key={meat}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.03 }}
+                        className="text-lg font-semibold text-gray-800 flex items-center gap-3 hover:text-primary transition-colors"
+                      >
+                        <span className="w-3 h-3 bg-primary rounded-full flex-shrink-0" />
+                        {meat}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Soul Food Sides */}
+                <div>
+                  <h3 className="font-heading text-2xl font-black text-primary mb-6 uppercase">Soul Food Sides</h3>
+                  <ul className="space-y-3">
+                    {t("menuPage.allSides", { returnObjects: true }).map((side: string, index: number) => (
+                      <motion.li
+                        key={side}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.03 }}
+                        className="text-lg font-semibold text-gray-800 flex items-center gap-3 hover:text-primary transition-colors"
+                      >
+                        <span className="w-3 h-3 bg-primary rounded-full flex-shrink-0" />
+                        {side}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-12 pt-8 border-t-2 border-primary/20">
+                <p className="text-center text-muted-foreground text-sm italic">
+                  {t("menuPage.orderNotice")}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </Layout>
   );
 };

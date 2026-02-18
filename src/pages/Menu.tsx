@@ -11,6 +11,8 @@ import potRoast from "@/assets/pot-roast.png";
 const Menu = () => {
   const { t } = useTranslation();
 
+  const allMeatsArray = t("menuPage.allMeats", { returnObjects: true }) as string[];
+
   const soulFoodMeats = [
     {
       name: t("menuPage.meats.catfish"),
@@ -63,17 +65,11 @@ const Menu = () => {
     },
   ];
 
-  const soulFoodSides = [
-    t("menuPage.sides.macCheese"),
-    t("menuPage.sides.collardGreens"),
-    t("menuPage.sides.candiedYams"),
-    t("menuPage.sides.greenBeans"),
-    t("menuPage.sides.mashedPotatoes"),
-    t("menuPage.sides.cabbage"),
-    t("menuPage.sides.blackEyedPeas"),
-    t("menuPage.sides.coleSlaw"),
-    t("menuPage.sides.cornOnCob"),
-  ];
+  // Create individual card data for all meats
+  const allMeatsCards = allMeatsArray.map((meat: string) => ({
+    name: meat,
+    description: ""
+  }));
 
   return (
     <Layout>
@@ -104,10 +100,10 @@ const Menu = () => {
       {/* Menu Items */}
       <section className="section-padding bg-background relative">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             {/* Meats Column */}
-            <div className="lg:col-span-2">
+            <div>
               <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
                 <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
                   {t("menuPage.meatsTitle")}
@@ -159,46 +155,88 @@ const Menu = () => {
                 ))}
               </div>
             </div>
-
-            {/* Sides Column */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-3xl p-8 shadow-warm-lg border-2 border-primary/10 sticky top-24">
-                <div className="flex items-center gap-3 mb-8 border-b-2 border-primary/20 pb-4">
-                  <h2 className="font-heading text-3xl font-black text-foreground uppercase tracking-tight">
-                    {t("menuPage.sidesTitle")}
-                  </h2>
-                </div>
-
-                <ul className="space-y-4">
-                  {soulFoodSides.map((side, index) => (
-                    <motion.li
-                      key={side}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      className="text-xl font-bold text-gray-800 flex items-center gap-3 hover:text-primary transition-colors cursor-default"
-                    >
-                      <span className="w-2 h-2 bg-primary rounded-full" />
-                      {side}
-                    </motion.li>
-                  ))}
-                </ul>
-
-                <div className="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                  <p className="text-sm font-bold text-primary uppercase mb-2">{t("common.notice")}</p>
-                  <p className="text-muted-foreground text-sm italic">
-                    {t("menuPage.orderNotice")}
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="text-center mt-20">
             <Button variant="soul" size="xl" asChild className="px-12 py-8 text-xl rounded-full shadow-2xl hover:scale-105 transition-transform">
               <Link to="/contact">{t("common.contactToOrder")}</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Soul Food Meats Section */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
+              <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground uppercase tracking-tight">
+                Soul Food Meats
+              </h2>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {allMeatsCards.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="bg-gradient-to-br from-primary/20 to-highlight/20 rounded-xl p-3 shadow-warm border-2 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:scale-105 transition-all"
+              >
+                <div className="flex items-center justify-center min-h-20">
+                  <h3 className="font-heading font-bold text-sm text-foreground text-center">
+                    {item.name}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Soul Food Sides Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
+              <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground uppercase tracking-tight">
+                Soul Food Sides
+              </h2>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {(t("menuPage.allSides", { returnObjects: true }) as string[]).map((side, index) => (
+              <motion.div
+                key={side}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="bg-gradient-to-br from-secondary/20 to-primary/10 rounded-xl p-3 shadow-warm border-2 border-secondary/30 hover:border-secondary/70 hover:shadow-lg hover:scale-105 transition-all"
+              >
+                <div className="flex items-center justify-center min-h-20">
+                  <h3 className="font-heading font-bold text-sm text-foreground text-center">
+                    {side}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -76,7 +76,7 @@ const Menu = () => {
     t("menuPage.sides.collardGreens"),
     t("menuPage.sides.candiedYams"),
     t("menuPage.sides.greenBeans"),
-    t("menuPage.sides.mashedPotatoes"),
+    t("menuPage.sides.gravy dark brown"),
     t("menuPage.sides.cabbage"),
     t("menuPage.sides.blackEyedPeas"),
     t("menuPage.sides.coleSlaw"),

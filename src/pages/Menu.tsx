@@ -211,7 +211,45 @@ const Menu = () => {
         </div>
       </section>
 
-      {/* Complete Sides & Meats Section - Individual Cards */}
+      {/* Soul Food Meats Section */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
+              <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground uppercase tracking-tight">
+                Soul Food Meats
+              </h2>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {allMeatsCards.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="bg-card rounded-2xl p-6 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
+              >
+                <div className="flex items-center justify-center min-h-32">
+                  <h3 className="font-heading font-bold text-lg text-foreground text-center">
+                    {item.name}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Soul Food Sides Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <motion.div
@@ -223,67 +261,28 @@ const Menu = () => {
           >
             <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
               <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground uppercase tracking-tight">
-                {t("menuPage.sidesAndMeatsTitle")}
+                Soul Food Sides
               </h2>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Meats Cards Column */}
-            <div className="lg:col-span-2">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {allMeatsCards.map((item, index) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className="bg-card rounded-2xl p-6 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
-                  >
-                    <div className="flex items-center justify-center min-h-32">
-                      <h3 className="font-heading font-bold text-xl text-foreground text-center">
-                        {item.name}
-                      </h3>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Sides List Column */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-3xl p-8 shadow-warm-lg border-2 border-primary/10 sticky top-24">
-                <div className="flex items-center gap-3 mb-8 border-b-2 border-primary/20 pb-4">
-                  <h2 className="font-heading text-2xl font-black text-foreground uppercase tracking-tight">
-                    {t("menuPage.sidesTitle")}
-                  </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {(t("menuPage.allSides", { returnObjects: true }) as string[]).map((side, index) => (
+              <motion.div
+                key={side}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="bg-card rounded-2xl p-6 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
+              >
+                <div className="flex items-center justify-center min-h-32">
+                  <h3 className="font-heading font-bold text-lg text-foreground text-center">
+                    {side}
+                  </h3>
                 </div>
-
-                <ul className="space-y-3">
-                  {(t("menuPage.allSides", { returnObjects: true }) as string[]).map((side, index) => (
-                    <motion.li
-                      key={side}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.03 }}
-                      className="text-lg font-semibold text-gray-800 flex items-center gap-3 hover:text-primary transition-colors cursor-default"
-                    >
-                      <span className="w-2 h-2 bg-primary rounded-full" />
-                      {side}
-                    </motion.li>
-                  ))}
-                </ul>
-
-                <div className="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                  <p className="text-sm font-bold text-primary uppercase mb-2">{t("common.notice")}</p>
-                  <p className="text-muted-foreground text-sm italic">
-                    {t("menuPage.orderNotice")}
-                  </p>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

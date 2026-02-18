@@ -228,7 +228,7 @@ const Menu = () => {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {allMeatsCards.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -236,10 +236,10 @@ const Menu = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-card rounded-2xl p-6 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
+                className="bg-card rounded-xl p-3 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
               >
-                <div className="flex items-center justify-center min-h-32">
-                  <h3 className="font-heading font-bold text-lg text-foreground text-center">
+                <div className="flex items-center justify-center min-h-20">
+                  <h3 className="font-heading font-bold text-sm text-foreground text-center">
                     {item.name}
                   </h3>
                 </div>
@@ -266,7 +266,7 @@ const Menu = () => {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {(t("menuPage.allSides", { returnObjects: true }) as string[]).map((side, index) => (
               <motion.div
                 key={side}
@@ -274,10 +274,10 @@ const Menu = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-card rounded-2xl p-6 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
+                className="bg-card rounded-xl p-3 shadow-warm border-2 border-gray-100 hover:border-primary/50 hover:shadow-md transition-all"
               >
-                <div className="flex items-center justify-center min-h-32">
-                  <h3 className="font-heading font-bold text-lg text-foreground text-center">
+                <div className="flex items-center justify-center min-h-20">
+                  <h3 className="font-heading font-bold text-sm text-foreground text-center">
                     {side}
                   </h3>
                 </div>

@@ -1,17 +1,12 @@
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
 const Reviews = () => {
   const { t } = useTranslation();
-  const reviews = t("reviewsPage.reviews", { returnObjects: true }) as Array<{
-    name: string;
-    location: string;
-    text: string;
-    date: string;
-  }>;
+
   return (
     <Layout>
       {/* Hero */}
@@ -34,44 +29,6 @@ const Reviews = () => {
               {t("reviewsPage.intro")}
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Reviews Grid */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <motion.div
-                key={review.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl p-6 shadow-sm relative"
-              >
-                <Quote className="w-10 h-10 text-accent/20 absolute top-4 right-4" />
-
-                <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-highlight text-highlight" />
-                  ))}
-                </div>
-
-                <p className="text-foreground mb-4">
-                  "{review.text}"
-                </p>
-
-                <div className="flex justify-between items-end">
-                  <div>
-                    <p className="font-bold text-foreground">{review.name}</p>
-                    <p className="text-muted-foreground text-sm">{review.location}</p>
-                  </div>
-                  <p className="text-muted-foreground text-xs">{review.date}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

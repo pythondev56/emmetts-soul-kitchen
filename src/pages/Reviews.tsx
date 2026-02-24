@@ -32,8 +32,8 @@ const Reviews = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding bg-card">
+      {/* Coming Soon Section */}
+      <section className="section-padding bg-background">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,11 +41,16 @@ const Reviews = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            <div className="inline-block mb-6">
+              <span className="bg-highlight text-foreground px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                Coming Soon
+              </span>
+            </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t("reviewsPage.cta.heading")}
+              Customer Reviews
             </h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              {t("reviewsPage.cta.description")}
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-lg">
+              We're currently gathering reviews from our amazing customers. Check back soon to see what people are saying about our soul food!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="soul" size="lg" asChild>

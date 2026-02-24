@@ -74,22 +74,22 @@ const Menu = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground py-20 relative overflow-hidden">
+      <section className="bg-primary text-primary-foreground py-12 sm:py-16 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 gingham-pattern opacity-10" />
-        <div className="container-custom text-center relative z-10">
+        <div className="container-custom text-center relative z-10 px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-heading text-5xl md:text-7xl font-black mb-6 drop-shadow-lg">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 drop-shadow-lg leading-tight">
               {t("menuPage.title")}
             </h1>
-            <div className="bg-white/20 backdrop-blur-md inline-block px-8 py-4 rounded-2xl border border-white/30">
-              <p className="text-2xl md:text-3xl font-bold">
+            <div className="bg-white/20 backdrop-blur-md inline-block px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg sm:rounded-2xl border border-white/30">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 {t("menuPage.subtitle")}
               </p>
-              <p className="text-lg opacity-90 mt-1 font-medium italic">
+              <p className="text-sm sm:text-base md:text-lg opacity-90 mt-1 font-medium italic">
                 {t("menuPage.dailyNotice")}
               </p>
             </div>
@@ -99,18 +99,18 @@ const Menu = () => {
 
       {/* Menu Items */}
       <section className="section-padding bg-background relative">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="container-custom px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
 
             {/* Meats Column */}
             <div>
-              <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
-                <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
+              <div className="flex items-center gap-3 mb-6 sm:mb-8 border-b-4 border-primary pb-3 sm:pb-4">
+                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
                   {t("menuPage.meatsTitle")}
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4 md:gap-5">
                 {soulFoodMeats.map((item, index) => (
                   <motion.div
                     key={item.name}
@@ -118,14 +118,14 @@ const Menu = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className={`rounded-2xl p-6 transition-all border-2 ${item.featured
-                      ? "bg-highlight/10 border-highlight shadow-md scale-[1.02]"
-                      : "bg-white border-gray-100 shadow-sm"
+                    className={`rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 transition-all border-2 ${item.featured
+                      ? "bg-highlight/10 border-highlight shadow-md hover:shadow-lg"
+                      : "bg-white border-gray-100 shadow-sm hover:shadow-md"
                       }`}
                   >
-                    <div className="flex flex-col md:flex-row gap-6">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6">
                       {item.image && (
-                        <div className="w-full md:w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden shadow-inner border border-gray-100">
+                        <div className="w-full sm:w-24 md:w-32 h-24 sm:h-24 md:h-32 flex-shrink-0 rounded-lg sm:rounded-lg md:rounded-xl overflow-hidden shadow-inner border border-gray-100">
                           <img
                             src={item.image}
                             alt={item.name}
@@ -133,18 +133,18 @@ const Menu = () => {
                           />
                         </div>
                       )}
-                      <div className="flex-1">
-                        <div className="flex justify-between items-start gap-4">
-                          <div className="flex-1">
-                            <h3 className="font-heading font-black text-xl text-foreground mb-2 flex items-center gap-2">
+                      <div className="flex-1 flex flex-col justify-center">
+                        <div className="flex flex-wrap justify-between items-start gap-2 sm:gap-3">
+                          <div className="flex-1 min-w-0">
+                            <h3 className="font-heading font-black text-base sm:text-lg md:text-xl text-foreground mb-1 sm:mb-2 flex flex-wrap items-center gap-1 sm:gap-2">
                               {item.name}
                               {item.featured && (
-                                <span className="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-tighter">
+                                <span className="bg-primary text-white text-[8px] sm:text-[9px] md:text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap">
                                   {t("menuPage.meats.specialty")}
                                 </span>
                               )}
                             </h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                            <p className="text-muted-foreground text-xs sm:text-sm md:text-sm leading-relaxed line-clamp-2">
                               {item.description}
                             </p>
                           </div>
@@ -157,8 +157,8 @@ const Menu = () => {
             </div>
           </div>
 
-          <div className="text-center mt-20">
-            <Button variant="soul" size="xl" asChild className="px-12 py-8 text-xl rounded-full shadow-2xl hover:scale-105 transition-transform">
+          <div className="text-center mt-12 sm:mt-16 md:mt-20">
+            <Button variant="soul" size="lg" asChild className="px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-full shadow-2xl hover:scale-105 transition-transform">
               <Link to="/contact">{t("common.contactToOrder")}</Link>
             </Button>
           </div>
@@ -167,22 +167,22 @@ const Menu = () => {
 
       {/* Soul Food Meats Section */}
       <section className="section-padding bg-background">
-        <div className="container-custom">
+        <div className="container-custom px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-8 sm:mb-12"
           >
-            <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
-              <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground uppercase tracking-tight">
+            <div className="flex items-center gap-3 mb-6 sm:mb-8 border-b-4 border-primary pb-3 sm:pb-4">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
                 Soul Food Meats
               </h2>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
             {allMeatsCards.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -190,10 +190,10 @@ const Menu = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-gradient-to-br from-primary/20 to-highlight/20 rounded-xl p-3 shadow-warm border-2 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:scale-105 transition-all"
+                className="bg-gradient-to-br from-primary/20 to-highlight/20 rounded-lg sm:rounded-lg md:rounded-xl p-2 sm:p-3 md:p-4 shadow-warm border-2 border-primary/30 hover:border-primary/70 hover:shadow-lg hover:scale-105 transition-all h-full"
               >
-                <div className="flex items-center justify-center min-h-20">
-                  <h3 className="font-heading font-bold text-sm text-foreground text-center">
+                <div className="flex items-center justify-center min-h-16 sm:min-h-20 md:min-h-24">
+                  <h3 className="font-heading font-bold text-xs sm:text-sm md:text-sm text-foreground text-center leading-tight">
                     {item.name}
                   </h3>
                 </div>
@@ -205,22 +205,22 @@ const Menu = () => {
 
       {/* Soul Food Sides Section */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
+        <div className="container-custom px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-8 sm:mb-12"
           >
-            <div className="flex items-center gap-3 mb-8 border-b-4 border-primary pb-4">
-              <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground uppercase tracking-tight">
+            <div className="flex items-center gap-3 mb-6 sm:mb-8 border-b-4 border-primary pb-3 sm:pb-4">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
                 Soul Food Sides
               </h2>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
             {(t("menuPage.allSides", { returnObjects: true }) as string[]).map((side, index) => (
               <motion.div
                 key={side}
@@ -228,10 +228,10 @@ const Menu = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-gradient-to-br from-secondary/20 to-primary/10 rounded-xl p-3 shadow-warm border-2 border-secondary/30 hover:border-secondary/70 hover:shadow-lg hover:scale-105 transition-all"
+                className="bg-gradient-to-br from-secondary/20 to-primary/10 rounded-lg sm:rounded-lg md:rounded-xl p-2 sm:p-3 md:p-4 shadow-warm border-2 border-secondary/30 hover:border-secondary/70 hover:shadow-lg hover:scale-105 transition-all h-full"
               >
-                <div className="flex items-center justify-center min-h-20">
-                  <h3 className="font-heading font-bold text-sm text-foreground text-center">
+                <div className="flex items-center justify-center min-h-16 sm:min-h-20 md:min-h-24">
+                  <h3 className="font-heading font-bold text-xs sm:text-sm md:text-sm text-foreground text-center leading-tight">
                     {side}
                   </h3>
                 </div>

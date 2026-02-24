@@ -55,7 +55,7 @@ const FeaturedDishes = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
           {dishes.map((dish, index) => (
             <motion.div
               key={dish.name}
@@ -65,19 +65,19 @@ const FeaturedDishes = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-card rounded-xl overflow-hidden shadow-warm card-hover">
-                <div className="relative h-48 overflow-hidden">
+              <div className="bg-card rounded-lg sm:rounded-xl overflow-hidden shadow-warm card-hover h-full flex flex-col">
+                <div className="relative h-40 sm:h-48 w-full overflow-hidden flex-shrink-0">
                   <img
                     src={dish.image}
                     alt={dish.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-heading font-bold text-lg text-foreground mb-1">
+                <div className="p-3 sm:p-4 flex flex-col flex-grow">
+                  <h3 className="font-heading font-bold text-base sm:text-lg text-foreground mb-1">
                     {dish.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-xs sm:text-sm line-clamp-3">
                     {dish.description}
                   </p>
                 </div>

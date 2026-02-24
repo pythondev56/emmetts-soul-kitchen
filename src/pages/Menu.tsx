@@ -110,7 +110,7 @@ const Menu = () => {
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4 md:gap-5">
+              <div className="grid grid-cols-1 gap-3 sm:gap-4 md:gap-5">
                 {soulFoodMeats.map((item, index) => (
                   <motion.div
                     key={item.name}
@@ -123,9 +123,9 @@ const Menu = () => {
                       : "bg-white border-gray-100 shadow-sm hover:shadow-md"
                       }`}
                   >
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6">
+                    <div className={`grid ${item.image ? 'grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] md:grid-cols-[120px_1fr]' : 'grid-cols-1'} gap-3 sm:gap-4 md:gap-5 items-start`}>
                       {item.image && (
-                        <div className="w-full sm:w-24 md:w-32 h-24 sm:h-24 md:h-32 flex-shrink-0 rounded-lg sm:rounded-lg md:rounded-xl overflow-hidden shadow-inner border border-gray-100">
+                        <div className="w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 flex-shrink-0 rounded-lg sm:rounded-lg md:rounded-xl overflow-hidden shadow-inner border border-gray-100">
                           <img
                             src={item.image}
                             alt={item.name}
@@ -133,22 +133,18 @@ const Menu = () => {
                           />
                         </div>
                       )}
-                      <div className="flex-1 flex flex-col justify-center">
-                        <div className="flex flex-wrap justify-between items-start gap-2 sm:gap-3">
-                          <div className="flex-1 min-w-0">
-                            <h3 className="font-heading font-black text-base sm:text-lg md:text-xl text-foreground mb-1 sm:mb-2 flex flex-wrap items-center gap-1 sm:gap-2">
-                              {item.name}
-                              {item.featured && (
-                                <span className="bg-primary text-white text-[8px] sm:text-[9px] md:text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap">
-                                  {t("menuPage.meats.specialty")}
-                                </span>
-                              )}
-                            </h3>
-                            <p className="text-muted-foreground text-xs sm:text-sm md:text-sm leading-relaxed line-clamp-2">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
+                      <div className="flex flex-col justify-start">
+                        <h3 className="font-heading font-black text-base sm:text-lg md:text-xl text-foreground mb-1 sm:mb-2 flex flex-wrap items-center gap-1 sm:gap-2">
+                          {item.name}
+                          {item.featured && (
+                            <span className="bg-primary text-white text-[8px] sm:text-[9px] md:text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap">
+                              {t("menuPage.meats.specialty")}
+                            </span>
+                          )}
+                        </h3>
+                        <p className="text-muted-foreground text-xs sm:text-sm md:text-sm leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
